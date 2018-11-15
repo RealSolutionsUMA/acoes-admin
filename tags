@@ -1,0 +1,373 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	/f9bbb35e/
+#content	public/stylesheets/main.css	/^#content{padding:30px 0;}$/;"	i
+#download	public/stylesheets/main.css	/^#download,#getLogo{display:none;position:absolute;padding:5px 20px;width:200px;background:#000;b/;"	i
+#download	public/stylesheets/main.css	/^#download{top:85px;right:50%;margin-right:-480px;}#download .button{font-size:16px;color:#80c846/;"	i
+#download .button	public/stylesheets/main.css	/^#download{top:85px;right:50%;margin-right:-480px;}#download .button{font-size:16px;color:#80c846/;"	c
+#download a	public/stylesheets/main.css	/^#download,#getLogo{display:none;position:absolute;padding:5px 20px;width:200px;background:#000;b/;"	s
+#download a:hover	public/stylesheets/main.css	/^#download,#getLogo{display:none;position:absolute;padding:5px 20px;width:200px;background:#000;b/;"	s
+#getLogo	public/stylesheets/main.css	/^#download,#getLogo{display:none;position:absolute;padding:5px 20px;width:200px;background:#000;b/;"	i
+#getLogo	public/stylesheets/main.css	/^#getLogo{text-align:center;}#getLogo h3{font-size:16px;color:#80c846;margin:0 0 15px;}$/;"	i
+#getLogo	public/stylesheets/main.css	/^#getLogo{top:85px;left:50%;padding:20px;margin-left:-480px;}#getLogo ul{margin:5px 0;}$/;"	i
+#getLogo a	public/stylesheets/main.css	/^#download,#getLogo{display:none;position:absolute;padding:5px 20px;width:200px;background:#000;b/;"	s
+#getLogo a:hover	public/stylesheets/main.css	/^#download,#getLogo{display:none;position:absolute;padding:5px 20px;width:200px;background:#000;b/;"	s
+#getLogo figure	public/stylesheets/main.css	/^#getLogo figure{border-radius:3px;margin:5px 0;padding:5px;background:#fff;line-height:25px;widt/;"	s
+#getLogo figure a	public/stylesheets/main.css	/^#getLogo figure{border-radius:3px;margin:5px 0;padding:5px;background:#fff;line-height:25px;widt/;"	s
+#getLogo figure a:hover	public/stylesheets/main.css	/^#getLogo figure{border-radius:3px;margin:5px 0;padding:5px;background:#fff;line-height:25px;widt/;"	s
+#getLogo h3	public/stylesheets/main.css	/^#getLogo{text-align:center;}#getLogo h3{font-size:16px;color:#80c846;margin:0 0 15px;}$/;"	s
+#getLogo li	public/stylesheets/main.css	/^#getLogo li{margin:1px 0;}$/;"	s
+#getLogo ul	public/stylesheets/main.css	/^#getLogo{top:85px;left:50%;padding:20px;margin-left:-480px;}#getLogo ul{margin:5px 0;}$/;"	s
+#news	public/stylesheets/main.css	/^#news{background:#f5f5f5;color:#999;font-size:17px;box-shadow:0 1px 0 rgba(0, 0, 0, 0.1);positio/;"	i
+#news ul	public/stylesheets/main.css	/^#news{background:#f5f5f5;color:#999;font-size:17px;box-shadow:0 1px 0 rgba(0, 0, 0, 0.1);positio/;"	s
+#quicklinks	public/stylesheets/main.css	/^#quicklinks{width:350px;margin:-15px 0 0 0;box-sizing:border-box;-webkit-box-sizing:border-box;-/;"	i
+#quicklinks a	public/stylesheets/main.css	/^#quicklinks a{color:#444;}#quicklinks a:hover{color:#222;}$/;"	s
+#quicklinks a:hover	public/stylesheets/main.css	/^#quicklinks a{color:#444;}#quicklinks a:hover{color:#222;}$/;"	s
+#quicklinks h2	public/stylesheets/main.css	/^#quicklinks{width:350px;margin:-15px 0 0 0;box-sizing:border-box;-webkit-box-sizing:border-box;-/;"	s
+#quicklinks h2:first-child	public/stylesheets/main.css	/^#quicklinks{width:350px;margin:-15px 0 0 0;box-sizing:border-box;-webkit-box-sizing:border-box;-/;"	s
+#quicklinks p	public/stylesheets/main.css	/^#quicklinks p{margin:0;}$/;"	s
+#title	public/stylesheets/main.css	/^#title{width:500px;float:left;font-size:17px;color:#2d6201;}$/;"	i
+#top	public/stylesheets/main.css	/^#top{background:#80c846 url(\/assets\/images\/header-pattern.png) fixed;box-shadow:0 -4px 0 rgba/;"	i
+#top .follow	public/stylesheets/main.css	/^#top .follow{display:inline-block;border:1px solid #6dae38;border-radius:3px;background:#80c846;/;"	c
+#top .follow:before	public/stylesheets/main.css	/^#top .follow{display:inline-block;border:1px solid #6dae38;border-radius:3px;background:#80c846;/;"	c
+#top .wrapper	public/stylesheets/main.css	/^#top{background:#80c846 url(\/assets\/images\/header-pattern.png) fixed;box-shadow:0 -4px 0 rgba/;"	c
+#top h1	public/stylesheets/main.css	/^#top h1{float:left;color:#fff;font-size:35px;line-height:48px;text-shadow:2px 2px 0 rgba(0, 0, 0/;"	s
+#top h1 a	public/stylesheets/main.css	/^#top h1{float:left;color:#fff;font-size:35px;line-height:48px;text-shadow:2px 2px 0 rgba(0, 0, 0/;"	s
+#top input	public/stylesheets/main.css	/^#top input{width:80px;-webkit-transition:width 200ms ease-in-out;-moz-transition:width 200ms eas/;"	s
+#top input:focus	public/stylesheets/main.css	/^#top input{width:80px;-webkit-transition:width 200ms ease-in-out;-moz-transition:width 200ms eas/;"	s
+#top nav	public/stylesheets/main.css	/^#top nav{float:right;margin-top:10px;line-height:25px;}#top nav .versions,#top nav form{float:le/;"	s
+#top nav .versions	public/stylesheets/main.css	/^#top nav .versions{height:25px;display:inline-block;border:1px solid #6dae38;border-radius:3px;b/;"	c
+#top nav .versions	public/stylesheets/main.css	/^#top nav{float:right;margin-top:10px;line-height:25px;}#top nav .versions,#top nav form{float:le/;"	c
+#top nav .versions select	public/stylesheets/main.css	/^#top nav .versions select{opacity:0;position:relative;z-index:9;}$/;"	s
+#top nav .versions span	public/stylesheets/main.css	/^#top nav .versions{height:25px;display:inline-block;border:1px solid #6dae38;border-radius:3px;b/;"	s
+#top nav .versions span:before	public/stylesheets/main.css	/^#top nav .versions{height:25px;display:inline-block;border:1px solid #6dae38;border-radius:3px;b/;"	s
+#top nav form	public/stylesheets/main.css	/^#top nav{float:right;margin-top:10px;line-height:25px;}#top nav .versions,#top nav form{float:le/;"	s
+.doc a[href^="http"] :after	public/stylesheets/main.css	/^aside a[href^="http"]:after,.doc a[href^="http"]:after{content:url(\/assets\/images\/external.pn/;"	s
+.half	public/stylesheets/main.css	/^.half{width:50%;float:left;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:b/;"	c
+.tweet	public/stylesheets/main.css	/^.tweet{border-bottom:1px solid #eee;padding:6px 0 20px 60px;position:relative;min-height:50px;ma/;"	c
+.tweet img	public/stylesheets/main.css	/^.tweet{border-bottom:1px solid #eee;padding:6px 0 20px 60px;position:relative;min-height:50px;ma/;"	s
+.tweet p	public/stylesheets/main.css	/^.tweet p{padding:0;margin:5px 0 0 0;}$/;"	s
+.tweet span	public/stylesheets/main.css	/^.tweet span{font-size:12px;color:#888;}$/;"	s
+.tweet strong	public/stylesheets/main.css	/^.tweet strong{font-size:14px;font-weight:bold;}$/;"	s
+.wrapper	public/stylesheets/main.css	/^.wrapper{width:960px;margin:0 auto;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-/;"	c
+.wrapper article	public/stylesheets/main.css	/^.wrapper article{min-height:310px;width:650px;float:left;}$/;"	s
+.wrapper aside	public/stylesheets/main.css	/^.wrapper aside{width:270px;float:right;}.wrapper aside ul{margin:2px 0 30px;}.wrapper aside ul a/;"	s
+.wrapper aside h3	public/stylesheets/main.css	/^.wrapper aside h3{font-size:18px;color:#333;font-weight:bold;line-height:2em;margin:9px 0;border/;"	s
+.wrapper aside ul	public/stylesheets/main.css	/^.wrapper aside{width:270px;float:right;}.wrapper aside ul{margin:2px 0 30px;}.wrapper aside ul a/;"	s
+.wrapper aside ul a	public/stylesheets/main.css	/^.wrapper aside{width:270px;float:right;}.wrapper aside ul{margin:2px 0 30px;}.wrapper aside ul a/;"	s
+.wrapper aside ul a:hover	public/stylesheets/main.css	/^.wrapper aside{width:270px;float:right;}.wrapper aside ul{margin:2px 0 30px;}.wrapper aside ul a/;"	s
+.wrapper aside.stick	public/stylesheets/main.css	/^.wrapper aside.stick{position:fixed;right:50%;margin-right:-480px;top:120px;bottom:0;overflow:hi/;"	c
+.wrapper:after	public/stylesheets/main.css	/^.wrapper{width:960px;margin:0 auto;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-/;"	c
+:focus	public/stylesheets/main.css	/^:focus{outline:0;}$/;"	s
+@message	app/views/welcome.scala.html	/^            <h1><a href="https:\/\/playframework.com\/documentation\/@version\/Home">@message<\//;"	h
+APP_BASE_NAME	gradlew.bat	/^set APP_BASE_NAME=%~n0$/;"	v
+APP_HOME	gradlew.bat	/^set APP_HOME=%DIRNAME%$/;"	v
+ApplicationTimer	app/services/ApplicationTimer.java	/^    public ApplicationTimer(Clock clock, ApplicationLifecycle appLifecycle) {$/;"	m	class:ApplicationTimer
+ApplicationTimer	app/services/ApplicationTimer.java	/^public class ApplicationTimer {$/;"	c
+Async Controller	app/views/welcome.scala.html	/^            <h2>Async Controller<\/h2>$/;"	i
+AsyncController	app/controllers/AsyncController.java	/^    public AsyncController(ActorSystem actorSystem, ExecutionContextExecutor exec) {$/;"	m	class:AsyncController
+AsyncController	app/controllers/AsyncController.java	/^public class AsyncController extends Controller {$/;"	c
+AtomicCounter	app/services/AtomicCounter.java	/^public class AtomicCounter implements Counter {$/;"	c
+Browse	app/views/welcome.scala.html	/^            <h3>Browse<\/h3>$/;"	j
+BrowserTest	test/BrowserTest.java	/^public class BrowserTest extends WithBrowser {$/;"	c
+CLASSPATH	gradlew.bat	/^set CLASSPATH=%APP_HOME%\\gradle\\wrapper\\gradle-wrapper.jar$/;"	v
+CMD_LINE_ARGS	gradlew.bat	/^set CMD_LINE_ARGS=$/;"	v
+CMD_LINE_ARGS	gradlew.bat	/^set CMD_LINE_ARGS=%*$/;"	v
+Components	README.md	/^## Components$/;"	s
+Controllers	README.md	/^## Controllers$/;"	s
+Count Controller	app/views/welcome.scala.html	/^            <h2>Count Controller<\/h2>$/;"	i
+CountController	app/controllers/CountController.java	/^    public CountController(Counter counter) {$/;"	m	class:CountController
+CountController	app/controllers/CountController.java	/^public class CountController extends Controller {$/;"	c
+Counter	app/services/Counter.java	/^public interface Counter {$/;"	i
+DEFAULT_JVM_OPTS	gradlew.bat	/^set DEFAULT_JVM_OPTS=$/;"	v
+DIRNAME	gradlew.bat	/^if "%DIRNAME%" == "" set DIRNAME=.$/;"	v
+DIRNAME	gradlew.bat	/^set DIRNAME=%~dp0$/;"	v
+ExampleFilter	app/filters/ExampleFilter.java	/^    public ExampleFilter(Executor exec) {$/;"	m	class:ExampleFilter
+ExampleFilter	app/filters/ExampleFilter.java	/^public class ExampleFilter extends EssentialFilter {$/;"	c
+Filters	README.md	/^## Filters$/;"	s
+FunctionalTest	test/FunctionalTest.java	/^public class FunctionalTest extends WithApplication {$/;"	c
+Help here	app/views/welcome.scala.html	/^            <h3>Help here<\/h3>$/;"	j
+HomeController	app/controllers/HomeController.java	/^public class HomeController extends Controller {$/;"	c
+JAVA_EXE	gradlew.bat	/^set JAVA_EXE=%JAVA_HOME%\/bin\/java.exe$/;"	v
+JAVA_EXE	gradlew.bat	/^set JAVA_EXE=java.exe$/;"	v
+JAVA_HOME	gradlew.bat	/^set JAVA_HOME=%JAVA_HOME:"=%$/;"	v
+Module	app/Module.java	/^public class Module extends AbstractModule {$/;"	c
+Need more documentation?	app/views/welcome.scala.html	/^            <h2>Need more documentation?<\/h2>$/;"	i
+Need more help?	app/views/welcome.scala.html	/^            <h2>Need more help?<\/h2>$/;"	i
+Need more info on the console?	app/views/welcome.scala.html	/^            <h2>Need more info on the console?<\/h2>$/;"	i
+Need to set up an IDE?	app/views/welcome.scala.html	/^            <h2>Need to set up an IDE?<\/h2>$/;"	i
+Running	README.md	/^## Running$/;"	s
+Start here	app/views/welcome.scala.html	/^            <h3>Start here<\/h3>$/;"	j
+UnitTest	test/UnitTest.java	/^public class UnitTest {$/;"	c
+Welcome to Play	app/views/welcome.scala.html	/^            <h1>Welcome to Play<\/h1>$/;"	h
+Why do you see this page?	app/views/welcome.scala.html	/^            <h2>Why do you see this page?<\/h2>$/;"	i
+_SKIP	gradlew.bat	/^set _SKIP=2$/;"	v
+a	public/stylesheets/main.css	/^a{color:#80c846;}a:hover{color:#6dae38;}$/;"	s
+a	public/stylesheets/main.css	/^html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,addres/;"	s
+a:hover	public/stylesheets/main.css	/^a{color:#80c846;}a:hover{color:#6dae38;}$/;"	s
+abbr	public/stylesheets/main.css	/^html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,addres/;"	s
+acronym	public/stylesheets/main.css	/^html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,addres/;"	s
+actorSystem	app/controllers/AsyncController.java	/^    private final ActorSystem actorSystem;$/;"	f	class:AsyncController	file:
+address	public/stylesheets/main.css	/^html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,addres/;"	s
+appLifecycle	app/services/ApplicationTimer.java	/^    private final ApplicationLifecycle appLifecycle;$/;"	f	class:ApplicationTimer	file:
+applet	public/stylesheets/main.css	/^html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,addres/;"	s
+apply	app/filters/ExampleFilter.java	/^    public EssentialAction apply(EssentialAction next) {$/;"	m	class:ExampleFilter
+article	public/stylesheets/main.css	/^article{}article h1,article h2,article h3,article h4,article h5,article h6{color:#333;font-weigh/;"	s
+article .note	public/stylesheets/main.css	/^article blockquote,article .note{margin:0 0 18px;padding:1px 20px;background:#fff7d6;}article bl/;"	c
+article .note a	public/stylesheets/main.css	/^article blockquote a,article .note a{color:#6dae38;}$/;"	s
+article .note code	public/stylesheets/main.css	/^article blockquote code,article .note code{background:#f5d899;border:none;color:inherit;}$/;"	s
+article .note li:before	public/stylesheets/main.css	/^article blockquote,article .note{margin:0 0 18px;padding:1px 20px;background:#fff7d6;}article bl/;"	s
+article .note pre	public/stylesheets/main.css	/^article blockquote pre,article .note pre{background:#F5D899 !important;color:#48484C !important;/;"	s
+article .subheader	public/stylesheets/main.css	/^article .subheader{color:#777;font-weight:300;margin-bottom:24px;}$/;"	c
+article a code	public/stylesheets/main.css	/^article a code{color:#80c846;}article a code:hover{color:#6dae38;}$/;"	s
+article a code:hover	public/stylesheets/main.css	/^article a code{color:#80c846;}article a code:hover{color:#6dae38;}$/;"	s
+article abbr	public/stylesheets/main.css	/^article abbr,article acronym{text-transform:uppercase;font-size:90%;color:#222;border-bottom:1px/;"	s
+article abbr	public/stylesheets/main.css	/^article abbr{text-transform:none;}$/;"	s
+article acronym	public/stylesheets/main.css	/^article abbr,article acronym{text-transform:uppercase;font-size:90%;color:#222;border-bottom:1px/;"	s
+article b	public/stylesheets/main.css	/^article strong,article b{font-weight:bold;line-height:inherit;}$/;"	s
+article blockquote	public/stylesheets/main.css	/^article blockquote,article .note{margin:0 0 18px;padding:1px 20px;background:#fff7d6;}article bl/;"	s
+article blockquote	public/stylesheets/main.css	/^article blockquote,article blockquote p,article p.note{line-height:20px;color:#4c4742;}$/;"	s
+article blockquote a	public/stylesheets/main.css	/^article blockquote a,article .note a{color:#6dae38;}$/;"	s
+article blockquote code	public/stylesheets/main.css	/^article blockquote code,article .note code{background:#f5d899;border:none;color:inherit;}$/;"	s
+article blockquote li:before	public/stylesheets/main.css	/^article blockquote,article .note{margin:0 0 18px;padding:1px 20px;background:#fff7d6;}article bl/;"	s
+article blockquote p	public/stylesheets/main.css	/^article blockquote,article blockquote p,article p.note{line-height:20px;color:#4c4742;}$/;"	s
+article blockquote pre	public/stylesheets/main.css	/^article blockquote pre,article .note pre{background:#F5D899 !important;color:#48484C !important;/;"	s
+article code	public/stylesheets/main.css	/^article code{background:#fafafa;color:#666;font-family:inconsolata, monospace;border:1px solid #/;"	s
+article dl dt	public/stylesheets/main.css	/^article dl dt{font-weight:bold;}$/;"	s
+article dl.tabbed	public/stylesheets/main.css	/^article dl.tabbed{position:relative;}$/;"	c
+article dl.tabbed dd	public/stylesheets/main.css	/^article dl.tabbed dd{position:absolute;width:100%;left:0;top:30px;}$/;"	s
+article dl.tabbed dd pre	public/stylesheets/main.css	/^article dl.tabbed dd pre{margin-top:0;border-top-left-radius:0;}$/;"	s
+article dl.tabbed dt	public/stylesheets/main.css	/^article dl.tabbed dt{float:left;margin:0 5px 0 0;border:1px solid #ddd;padding:0 20px;line-heigh/;"	s
+article dl.tabbed dt a	public/stylesheets/main.css	/^article dl.tabbed dt a{display:block;height:30px;color:#333;text-decoration:none;}$/;"	s
+article dl.tabbed dt.current	public/stylesheets/main.css	/^article dl.tabbed dt.current{background: #f7f7f7;}$/;"	c
+article em	public/stylesheets/main.css	/^article em,article i{font-style:italic;line-height:inherit;}$/;"	s
+article h1	public/stylesheets/main.css	/^article h1{font-size:36px;margin:0 0 18px;border-bottom:4px solid #eee;}$/;"	s
+article h1	public/stylesheets/main.css	/^article{}article h1,article h2,article h3,article h4,article h5,article h6{color:#333;font-weigh/;"	s
+article h1 a	public/stylesheets/main.css	/^article h1 a,article h2 a,article h3 a,article h4 a,article h5 a,article h6 a{font-weight:inheri/;"	s
+article h1 a:hover	public/stylesheets/main.css	/^article h1 a,article h2 a,article h3 a,article h4 a,article h5 a,article h6 a{font-weight:inheri/;"	s
+article h1 small	public/stylesheets/main.css	/^article h1 small,article h2 small,article h3 small,article h4 small,article h5 small{color:#777;/;"	s
+article h2	public/stylesheets/main.css	/^article h2{font-size:25px;margin-bottom:9px;border-bottom:2px solid #eee;}$/;"	s
+article h2	public/stylesheets/main.css	/^article{}article h1,article h2,article h3,article h4,article h5,article h6{color:#333;font-weigh/;"	s
+article h2 a	public/stylesheets/main.css	/^article h1 a,article h2 a,article h3 a,article h4 a,article h5 a,article h6 a{font-weight:inheri/;"	s
+article h2 a:hover	public/stylesheets/main.css	/^article h1 a,article h2 a,article h3 a,article h4 a,article h5 a,article h6 a{font-weight:inheri/;"	s
+article h2 small	public/stylesheets/main.css	/^article h1 small,article h2 small,article h3 small,article h4 small,article h5 small{color:#777;/;"	s
+article h3	public/stylesheets/main.css	/^article h3{font-size:18px;margin-bottom:9px;}$/;"	s
+article h3	public/stylesheets/main.css	/^article{}article h1,article h2,article h3,article h4,article h5,article h6{color:#333;font-weigh/;"	s
+article h3 a	public/stylesheets/main.css	/^article h1 a,article h2 a,article h3 a,article h4 a,article h5 a,article h6 a{font-weight:inheri/;"	s
+article h3 a:hover	public/stylesheets/main.css	/^article h1 a,article h2 a,article h3 a,article h4 a,article h5 a,article h6 a{font-weight:inheri/;"	s
+article h3 small	public/stylesheets/main.css	/^article h1 small,article h2 small,article h3 small,article h4 small,article h5 small{color:#777;/;"	s
+article h4	public/stylesheets/main.css	/^article h4{font-size:15px;margin-bottom:3px;}$/;"	s
+article h4	public/stylesheets/main.css	/^article{}article h1,article h2,article h3,article h4,article h5,article h6{color:#333;font-weigh/;"	s
+article h4 a	public/stylesheets/main.css	/^article h1 a,article h2 a,article h3 a,article h4 a,article h5 a,article h6 a{font-weight:inheri/;"	s
+article h4 a:hover	public/stylesheets/main.css	/^article h1 a,article h2 a,article h3 a,article h4 a,article h5 a,article h6 a{font-weight:inheri/;"	s
+article h4 small	public/stylesheets/main.css	/^article h1 small,article h2 small,article h3 small,article h4 small,article h5 small{color:#777;/;"	s
+article h5	public/stylesheets/main.css	/^article h5{font-size:12px;font-weight:normal;margin-bottom:3px;}$/;"	s
+article h5	public/stylesheets/main.css	/^article{}article h1,article h2,article h3,article h4,article h5,article h6{color:#333;font-weigh/;"	s
+article h5 a	public/stylesheets/main.css	/^article h1 a,article h2 a,article h3 a,article h4 a,article h5 a,article h6 a{font-weight:inheri/;"	s
+article h5 a:hover	public/stylesheets/main.css	/^article h1 a,article h2 a,article h3 a,article h4 a,article h5 a,article h6 a{font-weight:inheri/;"	s
+article h5 small	public/stylesheets/main.css	/^article h1 small,article h2 small,article h3 small,article h4 small,article h5 small{color:#777;/;"	s
+article h6	public/stylesheets/main.css	/^article{}article h1,article h2,article h3,article h4,article h5,article h6{color:#333;font-weigh/;"	s
+article h6 a	public/stylesheets/main.css	/^article h1 a,article h2 a,article h3 a,article h4 a,article h5 a,article h6 a{font-weight:inheri/;"	s
+article h6 a:hover	public/stylesheets/main.css	/^article h1 a,article h2 a,article h3 a,article h4 a,article h5 a,article h6 a{font-weight:inheri/;"	s
+article hr	public/stylesheets/main.css	/^article hr{border:solid #ddd;border-width:1px 0 0;clear:both;margin:12px 0 18px;height:0;}$/;"	s
+article i	public/stylesheets/main.css	/^article em,article i{font-style:italic;line-height:inherit;}$/;"	s
+article img	public/stylesheets/main.css	/^article img{max-width:100%;}$/;"	s
+article li>p:first-child	public/stylesheets/main.css	/^article li>p:first-child{margin-top:0;}$/;"	s
+article li>p:last-child	public/stylesheets/main.css	/^article li>p:last-child{margin-bottom:0;}$/;"	s
+article ol li	public/stylesheets/main.css	/^article ul li,article ol li{position:relative;padding:4px 0 4px 14px;}article ul li ol,article o/;"	s
+article ol li ol	public/stylesheets/main.css	/^article ul li,article ol li{position:relative;padding:4px 0 4px 14px;}article ul li ol,article o/;"	s
+article ol li ul	public/stylesheets/main.css	/^article ul li,article ol li{position:relative;padding:4px 0 4px 14px;}article ul li ol,article o/;"	s
+article ol li:before	public/stylesheets/main.css	/^article ul li:before,article ol li:before{position:absolute;top:8px;left:0;content:"►";color:#/;"	s
+article p	public/stylesheets/main.css	/^article p{line-height:1.3em;margin:1em 0;}$/;"	s
+article p img	public/stylesheets/main.css	/^article p img{margin:0;}$/;"	s
+article p.lead	public/stylesheets/main.css	/^article p.lead{font-size:18px;font-size:1.8rem;line-height:1.5;}$/;"	c
+article p.note	public/stylesheets/main.css	/^article blockquote,article blockquote p,article p.note{line-height:20px;color:#4c4742;}$/;"	c
+article p.note	public/stylesheets/main.css	/^article p.note{padding:15px 20px;}$/;"	c
+article pre	public/stylesheets/main.css	/^article pre{margin:10px 0;border:1px solid #ddd;padding:10px;background:#fafafa;color:#666;overf/;"	s
+article pre code	public/stylesheets/main.css	/^article pre code{border:0;background:inherit;border-radius:0;line-height:inherit;font-size:14px;/;"	s
+article pre.prettyprint	public/stylesheets/main.css	/^article pre.prettyprint{border:1px solid #ddd;padding:10px;}$/;"	c
+article small	public/stylesheets/main.css	/^article small{font-size:60%;line-height:inherit;}$/;"	s
+article strong	public/stylesheets/main.css	/^article strong,article b{font-weight:bold;line-height:inherit;}$/;"	s
+article table	public/stylesheets/main.css	/^article table{width:100%;}article table td{padding:8px;}$/;"	s
+article table td	public/stylesheets/main.css	/^article table{width:100%;}article table td{padding:8px;}$/;"	s
+article table tr	public/stylesheets/main.css	/^article table tr{background:#F4F4F7;border-bottom:1px solid #eee;}$/;"	s
+article table tr:nth-of-type(odd)	public/stylesheets/main.css	/^article table tr:nth-of-type(odd){background:#fafafa;}$/;"	s
+article ul li	public/stylesheets/main.css	/^article ul li,article ol li{position:relative;padding:4px 0 4px 14px;}article ul li ol,article o/;"	s
+article ul li ol	public/stylesheets/main.css	/^article ul li,article ol li{position:relative;padding:4px 0 4px 14px;}article ul li ol,article o/;"	s
+article ul li ul	public/stylesheets/main.css	/^article ul li,article ol li{position:relative;padding:4px 0 4px 14px;}article ul li ol,article o/;"	s
+article ul li:before	public/stylesheets/main.css	/^article ul li:before,article ol li:before{position:absolute;top:8px;left:0;content:"►";color:#/;"	s
+article>ol	public/stylesheets/main.css	/^article>ol{counter-reset:section;}article>ol li:before{color:#ccc;font-size:13px;}$/;"	s
+article>ol li:before	public/stylesheets/main.css	/^article>ol{counter-reset:section;}article>ol li:before{color:#ccc;font-size:13px;}$/;"	s
+article>ol>li	public/stylesheets/main.css	/^article>ol>li{padding:6px 0 4px 20px;counter-reset:chapter;}article>ol>li:before{content:counter/;"	s
+article>ol>li:before	public/stylesheets/main.css	/^article>ol>li{padding:6px 0 4px 20px;counter-reset:chapter;}article>ol>li:before{content:counter/;"	s
+article>ol>li>ol>li	public/stylesheets/main.css	/^article>ol>li>ol>li{padding:6px 0 4px 30px;counter-reset:item;}article>ol>li>ol>li:before{conten/;"	s
+article>ol>li>ol>li:before	public/stylesheets/main.css	/^article>ol>li>ol>li{padding:6px 0 4px 30px;counter-reset:item;}article>ol>li>ol>li:before{conten/;"	s
+article>ol>li>ol>li>ol>li	public/stylesheets/main.css	/^article>ol>li>ol>li>ol>li{padding:6px 0 4px 40px;}article>ol>li>ol>li>ol>li:before{content:count/;"	s
+article>ol>li>ol>li>ol>li:before	public/stylesheets/main.css	/^article>ol>li>ol>li>ol>li{padding:6px 0 4px 40px;}article>ol>li>ol>li>ol>li:before{content:count/;"	s
+aside a[href^="http"] :after	public/stylesheets/main.css	/^aside a[href^="http"]:after,.doc a[href^="http"]:after{content:url(\/assets\/images\/external.pn/;"	s
+atomicCounter	app/services/AtomicCounter.java	/^    private final AtomicInteger atomicCounter = new AtomicInteger();$/;"	f	class:AtomicCounter	file:
+big	public/stylesheets/main.css	/^html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,addres/;"	s
+blockquote	public/stylesheets/main.css	/^blockquote,q{quotes:"" "";}$/;"	s
+blockquote	public/stylesheets/main.css	/^html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,addres/;"	s
+blockquote:after	public/stylesheets/main.css	/^blockquote:before,blockquote:after,q:before,q:after{content:"";}$/;"	s
+blockquote:before	public/stylesheets/main.css	/^blockquote:before,blockquote:after,q:before,q:after{content:"";}$/;"	s
+body	public/stylesheets/main.css	/^body{background:#f5f5f5;background:#fff;color:#555;font:15px "Helvetica Nueue",sans-serif;paddin/;"	s
+body	public/stylesheets/main.css	/^html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,addres/;"	s
+caption	public/stylesheets/main.css	/^caption,th,td{text-align:left;font-weight:normal;}$/;"	s
+caption	public/stylesheets/main.css	/^html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,addres/;"	s
+cite	public/stylesheets/main.css	/^html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,addres/;"	s
+clock	app/services/ApplicationTimer.java	/^    private final Clock clock;$/;"	f	class:ApplicationTimer	file:
+code	public/stylesheets/main.css	/^html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,addres/;"	s
+configure	app/Module.java	/^    public void configure() {$/;"	m	class:Module
+controllers	app/controllers/AsyncController.java	/^package controllers;$/;"	p
+controllers	app/controllers/CountController.java	/^package controllers;$/;"	p
+controllers	app/controllers/HomeController.java	/^package controllers;$/;"	p
+count	app/controllers/CountController.java	/^    public Result count() {$/;"	m	class:CountController
+counter	app/controllers/CountController.java	/^    private final Counter counter;$/;"	f	class:CountController	file:
+dd	public/stylesheets/main.css	/^html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,addres/;"	s
+dd.error	public/stylesheets/main.css	/^dd.error{color:#c00;}$/;"	c
+dd.info	public/stylesheets/main.css	/^dd.info{color:#888;font-size:12px;}$/;"	c
+del	public/stylesheets/main.css	/^html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,addres/;"	s
+dfn	public/stylesheets/main.css	/^html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,addres/;"	s
+die	gradlew	/^die () {$/;"	f
+distributionBase	gradle/wrapper/gradle-wrapper.properties	/^distributionBase=GRADLE_USER_HOME$/;"	k
+distributionPath	gradle/wrapper/gradle-wrapper.properties	/^distributionPath=wrapper\/dists$/;"	k
+distributionUrl	gradle/wrapper/gradle-wrapper.properties	/^distributionUrl=https\\:\/\/services.gradle.org\/distributions\/gradle-4.9-bin.zip$/;"	k
+div	public/stylesheets/main.css	/^html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,addres/;"	s
+div.coreteam	public/stylesheets/main.css	/^div.coreteam{position:relative;min-height:80px;border-bottom:1px solid #eee;}div.coreteam img{wi/;"	c
+div.coreteam a	public/stylesheets/main.css	/^div.coreteam a{color:inherit;text-decoration:none;}$/;"	s
+div.coreteam h2	public/stylesheets/main.css	/^div.coreteam h2{padding-left:70px;border:none;font-size:20px;}$/;"	s
+div.coreteam img	public/stylesheets/main.css	/^div.coreteam{position:relative;min-height:80px;border-bottom:1px solid #eee;}div.coreteam img{wi/;"	s
+div.coreteam p	public/stylesheets/main.css	/^div.coreteam p{margin-top:5px;padding-left:70px;}$/;"	s
+div.list	public/stylesheets/main.css	/^div.list{float:left;width:33.3333%;margin-bottom:30px;}$/;"	c
+dl	public/stylesheets/main.css	/^html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,addres/;"	s
+dt	public/stylesheets/main.css	/^html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,addres/;"	s
+em	public/stylesheets/main.css	/^html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,addres/;"	s
+end	gradlew.bat	/^:end$/;"	l
+exec	app/controllers/AsyncController.java	/^    private final ExecutionContextExecutor exec;$/;"	f	class:AsyncController	file:
+exec	app/filters/ExampleFilter.java	/^    private final Executor exec;$/;"	f	class:ExampleFilter	file:
+execute	gradlew.bat	/^:execute$/;"	l
+fail	gradlew.bat	/^:fail$/;"	l
+fieldset	public/stylesheets/main.css	/^html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,addres/;"	s
+filters	app/filters/ExampleFilter.java	/^package filters;$/;"	p
+findJavaFromJavaHome	gradlew.bat	/^:findJavaFromJavaHome$/;"	l
+font	public/stylesheets/main.css	/^html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,addres/;"	s
+footer	public/stylesheets/main.css	/^footer{padding:40px 0;background:#363736;background:#eee;border-top:1px solid #e5e5e5;color:#aaa/;"	s
+footer .licence	public/stylesheets/main.css	/^footer .licence{width:960px;margin:0 auto;box-sizing:border-box;-webkit-box-sizing:border-box;-m/;"	c
+footer .licence .typesafe	public/stylesheets/main.css	/^footer .licence .typesafe,footer .licence .zenexity{float:right;}$/;"	c
+footer .licence .typesafe	public/stylesheets/main.css	/^footer .licence .typesafe{position:relative;top:-3px;margin-left:10px;}$/;"	c
+footer .licence .zenexity	public/stylesheets/main.css	/^footer .licence .typesafe,footer .licence .zenexity{float:right;}$/;"	c
+footer .licence a	public/stylesheets/main.css	/^footer .licence a{color:#999;}$/;"	s
+footer .licence:after	public/stylesheets/main.css	/^footer .licence{width:960px;margin:0 auto;box-sizing:border-box;-webkit-box-sizing:border-box;-m/;"	c
+footer .links	public/stylesheets/main.css	/^footer .links{width:960px;margin:0 auto;box-sizing:border-box;-webkit-box-sizing:border-box;-moz/;"	c
+footer .links a	public/stylesheets/main.css	/^footer .links a{color:#aaa;text-decoration:none;}footer .links a:hover{color:#888;}$/;"	s
+footer .links a:hover	public/stylesheets/main.css	/^footer .links a{color:#aaa;text-decoration:none;}footer .links a:hover{color:#888;}$/;"	s
+footer .links dl	public/stylesheets/main.css	/^footer .links dl{width:33%;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:b/;"	s
+footer .links dt	public/stylesheets/main.css	/^footer .links dt{color:#80c846;font-weight:bold;}$/;"	s
+footer .links:after	public/stylesheets/main.css	/^footer .links{width:960px;margin:0 auto;box-sizing:border-box;-webkit-box-sizing:border-box;-moz/;"	c
+footer .logo	public/stylesheets/main.css	/^footer{padding:40px 0;background:#363736;background:#eee;border-top:1px solid #e5e5e5;color:#aaa/;"	c
+footer:after	public/stylesheets/main.css	/^footer:after{content:" ";display:block;clear:both;}$/;"	s
+form	public/stylesheets/main.css	/^html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,addres/;"	s
+form dl	public/stylesheets/main.css	/^form dl{padding:10px 0;}$/;"	s
+form legend	public/stylesheets/main.css	/^form legend{display:none;}$/;"	s
+getFutureMessage	app/controllers/AsyncController.java	/^    private CompletionStage<String> getFutureMessage(long time, TimeUnit timeUnit) {$/;"	m	class:AsyncController	file:
+h1	public/stylesheets/main.css	/^h1{-webkit-font-smoothing:antialiased;}$/;"	s
+h1	public/stylesheets/main.css	/^html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,addres/;"	s
+h2	public/stylesheets/main.css	/^h2{clear:both;}$/;"	s
+h2	public/stylesheets/main.css	/^h2{font-weight:bold;font-size:28px;}$/;"	s
+h2	public/stylesheets/main.css	/^html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,addres/;"	s
+h3	public/stylesheets/main.css	/^html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,addres/;"	s
+h4	public/stylesheets/main.css	/^html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,addres/;"	s
+h5	public/stylesheets/main.css	/^html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,addres/;"	s
+h6	public/stylesheets/main.css	/^html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,addres/;"	s
+header	public/stylesheets/main.css	/^header{position:fixed;top:0;z-index:1000;width:100%;height:50px;line-height:50px;padding:30px 0;/;"	s
+header #logo	public/stylesheets/main.css	/^header{position:fixed;top:0;z-index:1000;width:100%;height:50px;line-height:50px;padding:30px 0;/;"	i
+header nav	public/stylesheets/main.css	/^header nav{position:absolute;right:50%;margin-right:-480px;}header nav a{padding:0 10px 4px;font/;"	s
+header nav a	public/stylesheets/main.css	/^header nav{position:absolute;right:50%;margin-right:-480px;}header nav a{padding:0 10px 4px;font/;"	s
+header nav a.download	public/stylesheets/main.css	/^header nav a.download{position:relative;background:#80c846;color:white;margin-left:10px;padding:/;"	c
+header nav a.download:active	public/stylesheets/main.css	/^header nav a.download:active{box-shadow:0 1px 0 #6dae38;top:2px;-webkit-transition:none;}$/;"	c
+header nav a.download:hover	public/stylesheets/main.css	/^header nav a.download{position:relative;background:#80c846;color:white;margin-left:10px;padding:/;"	c
+header nav a.selected	public/stylesheets/main.css	/^header nav a.selected{border-bottom:3px solid #E9E9E9;}$/;"	c
+hr	public/stylesheets/main.css	/^hr{clear:both;margin:20px 0 25px 0;border:none;border-top:1px solid #444;visibility:visible;disp/;"	s
+hr	public/stylesheets/main.css	/^hr{display:none;visibility:hidden;}$/;"	s
+html	public/stylesheets/main.css	/^html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,addres/;"	s
+iframe	public/stylesheets/main.css	/^html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,addres/;"	s
+img	public/stylesheets/main.css	/^html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,addres/;"	s
+index	app/controllers/HomeController.java	/^    public Result index() {$/;"	m	class:HomeController
+init	gradlew.bat	/^:init$/;"	l
+ins	public/stylesheets/main.css	/^html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,addres/;"	s
+kbd	public/stylesheets/main.css	/^html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,addres/;"	s
+key	conf/application.conf	/^play.http.secret.key = "changeme"$/;"	k
+label	public/stylesheets/main.css	/^html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,addres/;"	s
+legend	public/stylesheets/main.css	/^html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,addres/;"	s
+li	public/stylesheets/main.css	/^html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,addres/;"	s
+logger	app/services/ApplicationTimer.java	/^    private final org.slf4j.Logger logger = org.slf4j.LoggerFactory.getLogger("application");$/;"	f	class:ApplicationTimer	file:
+mainEnd	gradlew.bat	/^:mainEnd$/;"	l
+message	app/controllers/AsyncController.java	/^    public CompletionStage<Result> message() {$/;"	m	class:AsyncController
+nextCount	app/services/AtomicCounter.java	/^    public int nextCount() {$/;"	m	class:AtomicCounter
+nextCount	app/services/Counter.java	/^    int nextCount();$/;"	m	interface:Counter
+object	public/stylesheets/main.css	/^html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,addres/;"	s
+ol	public/stylesheets/main.css	/^html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,addres/;"	s
+ol	public/stylesheets/main.css	/^ol,ul{list-style:none;}$/;"	s
+omega	gradlew.bat	/^:omega$/;"	l
+p	public/stylesheets/main.css	/^html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,addres/;"	s
+p	public/stylesheets/main.css	/^p{margin:1em 0;}$/;"	s
+play-java-starter-example	README.md	/^# play-java-starter-example$/;"	c
+pre	public/stylesheets/main.css	/^html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,addres/;"	s
+provideApplication	test/BrowserTest.java	/^    protected Application provideApplication() {$/;"	m	class:BrowserTest
+provideBrowser	test/BrowserTest.java	/^    protected TestBrowser provideBrowser(int port) {$/;"	m	class:BrowserTest
+q	public/stylesheets/main.css	/^blockquote,q{quotes:"" "";}$/;"	s
+q	public/stylesheets/main.css	/^html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,addres/;"	s
+q:after	public/stylesheets/main.css	/^blockquote:before,blockquote:after,q:before,q:after{content:"";}$/;"	s
+q:before	public/stylesheets/main.css	/^blockquote:before,blockquote:after,q:before,q:after{content:"";}$/;"	s
+renderTemplate	test/FunctionalTest.java	/^    public void renderTemplate() {$/;"	m	class:FunctionalTest
+s	public/stylesheets/main.css	/^html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,addres/;"	s
+samp	public/stylesheets/main.css	/^html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,addres/;"	s
+save	gradlew	/^save () {$/;"	f
+sbt.version	project/build.properties	/^sbt.version=1.2.1$/;"	k
+section	public/stylesheets/main.css	/^section{padding:50px 0;}$/;"	s
+services	app/services/ApplicationTimer.java	/^package services;$/;"	p
+services	app/services/AtomicCounter.java	/^package services;$/;"	p
+services	app/services/Counter.java	/^package services;$/;"	p
+simpleCheck	test/UnitTest.java	/^    public void simpleCheck() {$/;"	m	class:UnitTest
+small	public/stylesheets/main.css	/^html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,addres/;"	s
+span	public/stylesheets/main.css	/^html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,addres/;"	s
+span.by	public/stylesheets/main.css	/^span.by{font-size:14px;font-weight:normal;}$/;"	c
+start	app/services/ApplicationTimer.java	/^    private final Instant start;$/;"	f	class:ApplicationTimer	file:
+strike	public/stylesheets/main.css	/^html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,addres/;"	s
+strong	public/stylesheets/main.css	/^html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,addres/;"	s
+sub	public/stylesheets/main.css	/^html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,addres/;"	s
+sup	public/stylesheets/main.css	/^html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,addres/;"	s
+table	public/stylesheets/main.css	/^html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,addres/;"	s
+table	public/stylesheets/main.css	/^table{border-collapse:collapse;border-spacing:0;}$/;"	s
+tbody	public/stylesheets/main.css	/^html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,addres/;"	s
+td	public/stylesheets/main.css	/^caption,th,td{text-align:left;font-weight:normal;}$/;"	s
+td	public/stylesheets/main.css	/^html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,addres/;"	s
+test	test/BrowserTest.java	/^    public void test() {$/;"	m	class:BrowserTest
+testAsync	test/UnitTest.java	/^    public void testAsync() {$/;"	m	class:UnitTest
+testCount	test/UnitTest.java	/^    public void testCount() {$/;"	m	class:UnitTest
+tfoot	public/stylesheets/main.css	/^html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,addres/;"	s
+th	public/stylesheets/main.css	/^caption,th,td{text-align:left;font-weight:normal;}$/;"	s
+th	public/stylesheets/main.css	/^html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,addres/;"	s
+thead	public/stylesheets/main.css	/^html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,addres/;"	s
+tr	public/stylesheets/main.css	/^html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,addres/;"	s
+tt	public/stylesheets/main.css	/^html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,addres/;"	s
+ul	public/stylesheets/main.css	/^html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,addres/;"	s
+ul	public/stylesheets/main.css	/^ol,ul{list-style:none;}$/;"	s
+ul.contributors	public/stylesheets/main.css	/^ul.contributors{padding:0;margin:0;list-style:none;}ul.contributors li{padding:6px 0 !important;/;"	c
+ul.contributors a	public/stylesheets/main.css	/^ul.contributors a{color:inherit;text-decoration:none;}$/;"	s
+ul.contributors img	public/stylesheets/main.css	/^ul.contributors img{width:25px;padding:1px;border:1px solid #ddd;margin-right:5px;vertical-align/;"	s
+ul.contributors li	public/stylesheets/main.css	/^ul.contributors{padding:0;margin:0;list-style:none;}ul.contributors li{padding:6px 0 !important;/;"	s
+ul.contributors li:before	public/stylesheets/main.css	/^ul.contributors{padding:0;margin:0;list-style:none;}ul.contributors li{padding:6px 0 !important;/;"	s
+ul.contributors span	public/stylesheets/main.css	/^ul.contributors span{font-weight:bold;color:#666;}$/;"	s
+ul.contributors.others li	public/stylesheets/main.css	/^ul.contributors.others li{display:inline-block;width:32.3333%;}$/;"	s
+var	public/stylesheets/main.css	/^html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,addres/;"	s
+warn	gradlew	/^warn () {$/;"	f
+win9xME_args	gradlew.bat	/^:win9xME_args$/;"	l
+win9xME_args_slurp	gradlew.bat	/^:win9xME_args_slurp$/;"	l
+zipStoreBase	gradle/wrapper/gradle-wrapper.properties	/^zipStoreBase=GRADLE_USER_HOME$/;"	k
+zipStorePath	gradle/wrapper/gradle-wrapper.properties	/^zipStorePath=wrapper\/dists$/;"	k

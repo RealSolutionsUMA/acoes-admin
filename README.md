@@ -20,3 +20,4 @@ and in case that you are using linux
 Then press on the project viewer, in case that there are still errors try to run the commands again. The intellij window should be like this.
 
 ![Sample project structure](doc/images/project_structure.png)
+

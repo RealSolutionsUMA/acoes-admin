@@ -10,10 +10,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import models.Administrador;
 
-/**
- *
- * @author archie
- */
+
 @Stateless
 public class AdministradorFacade extends AbstractFacade<Administrador> {
 

@@ -10,10 +10,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import models.Becado;
 
-/**
- *
- * @author archie
- */
+
 @Stateless
 public class BecadoFacade extends AbstractFacade<Becado> {
 

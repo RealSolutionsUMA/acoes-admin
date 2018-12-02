@@ -17,10 +17,7 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.xml.bind.annotation.XmlRootElement;
 
-/**
- *
- * @author archie
- */
+
 @Entity
 @Table(name = "usuario_local")
 @XmlRootElement

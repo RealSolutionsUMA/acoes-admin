@@ -22,10 +22,7 @@ import javax.validation.constraints.NotNull;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 
-/**
- *
- * @author archie
- */
+
 @Entity
 @Table(name = "agentes")
 @XmlRootElement

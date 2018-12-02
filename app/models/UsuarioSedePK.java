@@ -11,10 +11,7 @@ import javax.persistence.Column;
 import javax.persistence.Embeddable;
 import javax.validation.constraints.NotNull;
 
-/**
- *
- * @author archie
- */
+
 @Embeddable
 public class UsuarioSedePK implements Serializable {
 

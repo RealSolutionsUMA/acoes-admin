@@ -10,10 +10,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import models.EstaEn;
 
-/**
- *
- * @author archie
- */
+
 @Stateless
 public class EstaEnFacade extends AbstractFacade<EstaEn> {
 

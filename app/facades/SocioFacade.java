@@ -10,10 +10,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import models.Socio;
 
-/**
- *
- * @author archie
- */
+
 @Stateless
 public class SocioFacade extends AbstractFacade<Socio> {
 

@@ -8,10 +8,7 @@ package facades;
 import java.util.List;
 import javax.persistence.EntityManager;
 
-/**
- *
- * @author archie
- */
+
 public abstract class AbstractFacade<T> {
 
     private Class<T> entityClass;

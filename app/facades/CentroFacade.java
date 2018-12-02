@@ -10,10 +10,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import models.Centro;
 
-/**
- *
- * @author archie
- */
+
 @Stateless
 public class CentroFacade extends AbstractFacade<Centro> {
 

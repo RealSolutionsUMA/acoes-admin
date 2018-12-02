@@ -10,10 +10,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import models.ResponsableEconomico;
 
-/**
- *
- * @author archie
- */
+
 @Stateless
 public class ResponsableEconomicoFacade extends AbstractFacade<ResponsableEconomico> {
 

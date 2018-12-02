@@ -10,10 +10,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import models.UsuarioLocal;
 
-/**
- *
- * @author archie
- */
+
 @Stateless
 public class UsuarioLocalFacade extends AbstractFacade<UsuarioLocal> {
 

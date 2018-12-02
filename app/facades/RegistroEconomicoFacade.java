@@ -10,10 +10,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import models.RegistroEconomico;
 
-/**
- *
- * @author archie
- */
+
 @Stateless
 public class RegistroEconomicoFacade extends AbstractFacade<RegistroEconomico> {
 

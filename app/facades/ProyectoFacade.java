@@ -10,10 +10,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import models.Proyecto;
 
-/**
- *
- * @author archie
- */
+
 @Stateless
 public class ProyectoFacade extends AbstractFacade<Proyecto> {
 

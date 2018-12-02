@@ -10,10 +10,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import models.Coordinador;
 
-/**
- *
- * @author archie
- */
+
 @Stateless
 public class CoordinadorFacade extends AbstractFacade<Coordinador> {
 

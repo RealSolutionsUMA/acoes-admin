@@ -21,10 +21,7 @@ import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
 import javax.xml.bind.annotation.XmlRootElement;
 
-/**
- *
- * @author archie
- */
+
 @Entity
 @Table(name = "administracion_apadrinamiento")
 @XmlRootElement

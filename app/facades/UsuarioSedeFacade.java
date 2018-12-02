@@ -10,10 +10,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import models.UsuarioSede;
 
-/**
- *
- * @author archie
- */
+
 @Stateless
 public class UsuarioSedeFacade extends AbstractFacade<UsuarioSede> {
 

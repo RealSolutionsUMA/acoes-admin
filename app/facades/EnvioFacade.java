@@ -10,10 +10,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import models.Envio;
 
-/**
- *
- * @author archie
- */
+
 @Stateless
 public class EnvioFacade extends AbstractFacade<Envio> {
 

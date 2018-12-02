@@ -13,5 +13,6 @@ libraryDependencies ++= Seq(
   javaJpa,
   "com.h2database" % "h2" % "1.4.197",
   "org.hibernate" % "hibernate-core" % "5.2.17.Final",
-  javaWs % "test"
+  javaWs % "test",
+  "javax.ejb" % "ejb-api" % "3.0" % "provided"
 )

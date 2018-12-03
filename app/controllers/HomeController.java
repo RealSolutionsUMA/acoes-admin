@@ -1,8 +1,9 @@
 package controllers;
 
-import play.mvc.*;
-
-import views.html.*;
+import play.mvc.Controller;
+import play.mvc.Result;
+import views.html.hello;
+import views.html.index;
 
 /**
  * This controller contains an action to handle HTTP requests

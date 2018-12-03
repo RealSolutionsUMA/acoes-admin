@@ -1,106 +1,34 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package models;
 
-import java.io.Serializable;
-import java.util.Collection;
-import javax.persistence.Basic;
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlTransient;
-
+import javax.persistence.*;
+import java.util.Objects;
 
 @Entity
-@Table(name = "proyecto")
-@XmlRootElement
-@NamedQueries({
-    @NamedQuery(name = "Proyecto.findAll", query = "SELECT p FROM Proyecto p")
-    , @NamedQuery(name = "Proyecto.findById", query = "SELECT p FROM Proyecto p WHERE p.id = :id")
-    , @NamedQuery(name = "Proyecto.findByNombre", query = "SELECT p FROM Proyecto p WHERE p.nombre = :nombre")
-    , @NamedQuery(name = "Proyecto.findByDescripcion", query = "SELECT p FROM Proyecto p WHERE p.descripcion = :descripcion")
-    , @NamedQuery(name = "Proyecto.findByRepartoCombustible", query = "SELECT p FROM Proyecto p WHERE p.repartoCombustible = :repartoCombustible")
-    , @NamedQuery(name = "Proyecto.findByRepartoMantenimiento", query = "SELECT p FROM Proyecto p WHERE p.repartoMantenimiento = :repartoMantenimiento")
-    , @NamedQuery(name = "Proyecto.findByRepartoCtaContenedor", query = "SELECT p FROM Proyecto p WHERE p.repartoCtaContenedor = :repartoCtaContenedor")
-    , @NamedQuery(name = "Proyecto.findByRegionAyuda", query = "SELECT p FROM Proyecto p WHERE p.regionAyuda = :regionAyuda")})
-public class Proyecto implements Serializable {
+public class Proyecto {
+    public enum RegionAyuda {
+        Honduras
+    }
 
-    private static final long serialVersionUID = 1L;
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Basic(optional = false)
-    @Column(name = "id")
-    private Integer id;
-    @Basic(optional = false)
-    @NotNull
-    @Size(min = 1, max = 45)
-    @Column(name = "nombre")
+    private int id;
     private String nombre;
-    @Basic(optional = false)
-    @NotNull
-    @Size(min = 1, max = 100)
-    @Column(name = "descripcion")
     private String descripcion;
-    @Basic(optional = false)
-    @NotNull
-    @Column(name = "reparto_combustible")
     private double repartoCombustible;
-    @Basic(optional = false)
-    @NotNull
-    @Column(name = "reparto_mantenimiento")
     private double repartoMantenimiento;
-    @Basic(optional = false)
-    @NotNull
-    @Column(name = "reparto_cta_contenedor")
     private double repartoCtaContenedor;
-    @Basic(optional = false)
-    @NotNull
-    @Size(min = 1, max = 45)
-    @Column(name = "region_ayuda")
-    private String regionAyuda;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "proyecto")
-    private Collection<RegistroEconomico> registroEconomicoCollection;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "proyecto1")
-    private Collection<Centro> centroCollection;
+    private RegionAyuda regionAyuda;
 
-    public Proyecto() {
-    }
-
-    public Proyecto(Integer id) {
-        this.id = id;
-    }
-
-    public Proyecto(Integer id, String nombre, String descripcion, double repartoCombustible, double repartoMantenimiento, double repartoCtaContenedor, String regionAyuda) {
-        this.id = id;
-        this.nombre = nombre;
-        this.descripcion = descripcion;
-        this.repartoCombustible = repartoCombustible;
-        this.repartoMantenimiento = repartoMantenimiento;
-        this.repartoCtaContenedor = repartoCtaContenedor;
-        this.regionAyuda = regionAyuda;
-    }
-
-    public Integer getId() {
+    @Id
+    @Column(name = "id", nullable = false)
+    public int getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(int id) {
         this.id = id;
     }
 
+    @Basic
+    @Column(name = "nombre", nullable = false, length = 45)
     public String getNombre() {
         return nombre;
     }
@@ -109,6 +37,8 @@ public class Proyecto implements Serializable {
         this.nombre = nombre;
     }
 
+    @Basic
+    @Column(name = "descripcion", nullable = false, length = 100)
     public String getDescripcion() {
         return descripcion;
     }
@@ -117,6 +47,8 @@ public class Proyecto implements Serializable {
         this.descripcion = descripcion;
     }
 
+    @Basic
+    @Column(name = "reparto_combustible", nullable = false, precision = 0)
     public double getRepartoCombustible() {
         return repartoCombustible;
     }
@@ -125,6 +57,8 @@ public class Proyecto implements Serializable {
         this.repartoCombustible = repartoCombustible;
     }
 
+    @Basic
+    @Column(name = "reparto_mantenimiento", nullable = false, precision = 0)
     public double getRepartoMantenimiento() {
         return repartoMantenimiento;
     }
@@ -133,6 +67,8 @@ public class Proyecto implements Serializable {
         this.repartoMantenimiento = repartoMantenimiento;
     }
 
+    @Basic
+    @Column(name = "reparto_cta_contenedor", nullable = false, precision = 0)
     public double getRepartoCtaContenedor() {
         return repartoCtaContenedor;
     }
@@ -141,55 +77,32 @@ public class Proyecto implements Serializable {
         this.repartoCtaContenedor = repartoCtaContenedor;
     }
 
-    public String getRegionAyuda() {
+    @Enumerated(EnumType.STRING)
+    @Column(name = "region_ayuda", nullable = false, columnDefinition = "ENUM('Honduras')")
+    public RegionAyuda getRegionAyuda() {
         return regionAyuda;
     }
 
-    public void setRegionAyuda(String regionAyuda) {
+    public void setRegionAyuda(RegionAyuda regionAyuda) {
         this.regionAyuda = regionAyuda;
     }
 
-    @XmlTransient
-    public Collection<RegistroEconomico> getRegistroEconomicoCollection() {
-        return registroEconomicoCollection;
-    }
-
-    public void setRegistroEconomicoCollection(Collection<RegistroEconomico> registroEconomicoCollection) {
-        this.registroEconomicoCollection = registroEconomicoCollection;
-    }
-
-    @XmlTransient
-    public Collection<Centro> getCentroCollection() {
-        return centroCollection;
-    }
-
-    public void setCentroCollection(Collection<Centro> centroCollection) {
-        this.centroCollection = centroCollection;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Proyecto proyecto = (Proyecto) o;
+        return id == proyecto.id &&
+              Double.compare(proyecto.repartoCombustible, repartoCombustible) == 0 &&
+              Double.compare(proyecto.repartoMantenimiento, repartoMantenimiento) == 0 &&
+              Double.compare(proyecto.repartoCtaContenedor, repartoCtaContenedor) == 0 &&
+              Objects.equals(nombre, proyecto.nombre) &&
+              Objects.equals(descripcion, proyecto.descripcion) &&
+              Objects.equals(regionAyuda, proyecto.regionAyuda);
     }
 
     @Override
     public int hashCode() {
-        int hash = 0;
-        hash += (id != null ? id.hashCode() : 0);
-        return hash;
+        return Objects.hash(id, nombre, descripcion, repartoCombustible, repartoMantenimiento, repartoCtaContenedor, regionAyuda);
     }
-
-    @Override
-    public boolean equals(Object object) {
-        // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Proyecto)) {
-            return false;
-        }
-        Proyecto other = (Proyecto) object;
-        if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
-            return false;
-        }
-        return true;
-    }
-
-    @Override
-    public String toString() {
-        return "entities.Proyecto[ id=" + id + " ]";
-    }
-    
 }

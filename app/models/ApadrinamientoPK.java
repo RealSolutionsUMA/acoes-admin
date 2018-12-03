@@ -1,41 +1,17 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package models;
 
-import java.io.Serializable;
-import javax.persistence.Basic;
 import javax.persistence.Column;
-import javax.persistence.Embeddable;
-import javax.validation.constraints.NotNull;
+import javax.persistence.Id;
+import java.io.Serializable;
+import java.util.Objects;
 
-
-@Embeddable
 public class ApadrinamientoPK implements Serializable {
-
-    @Basic(optional = false)
-    @Column(name = "id")
     private int id;
-    @Basic(optional = false)
-    @NotNull
-    @Column(name = "apadrinado")
     private int apadrinado;
-    @Basic(optional = false)
-    @NotNull
-    @Column(name = "padrino")
     private int padrino;
 
-    public ApadrinamientoPK() {
-    }
-
-    public ApadrinamientoPK(int id, int apadrinado, int padrino) {
-        this.id = id;
-        this.apadrinado = apadrinado;
-        this.padrino = padrino;
-    }
-
+    @Column(name = "id", nullable = false)
+    @Id
     public int getId() {
         return id;
     }
@@ -44,6 +20,8 @@ public class ApadrinamientoPK implements Serializable {
         this.id = id;
     }
 
+    @Column(name = "apadrinado", nullable = false)
+    @Id
     public int getApadrinado() {
         return apadrinado;
     }
@@ -52,6 +30,8 @@ public class ApadrinamientoPK implements Serializable {
         this.apadrinado = apadrinado;
     }
 
+    @Column(name = "padrino", nullable = false)
+    @Id
     public int getPadrino() {
         return padrino;
     }
@@ -61,36 +41,17 @@ public class ApadrinamientoPK implements Serializable {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ApadrinamientoPK that = (ApadrinamientoPK) o;
+        return id == that.id &&
+              apadrinado == that.apadrinado &&
+              padrino == that.padrino;
+    }
+
+    @Override
     public int hashCode() {
-        int hash = 0;
-        hash += (int) id;
-        hash += (int) apadrinado;
-        hash += (int) padrino;
-        return hash;
+        return Objects.hash(id, apadrinado, padrino);
     }
-
-    @Override
-    public boolean equals(Object object) {
-        // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof ApadrinamientoPK)) {
-            return false;
-        }
-        ApadrinamientoPK other = (ApadrinamientoPK) object;
-        if (this.id != other.id) {
-            return false;
-        }
-        if (this.apadrinado != other.apadrinado) {
-            return false;
-        }
-        if (this.padrino != other.padrino) {
-            return false;
-        }
-        return true;
-    }
-
-    @Override
-    public String toString() {
-        return "entities.ApadrinamientoPK[ id=" + id + ", apadrinado=" + apadrinado + ", padrino=" + padrino + " ]";
-    }
-    
 }

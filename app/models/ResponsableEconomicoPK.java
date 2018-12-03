@@ -1,37 +1,16 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package models;
 
-import java.io.Serializable;
-import javax.persistence.Basic;
 import javax.persistence.Column;
-import javax.persistence.Embeddable;
-import javax.validation.constraints.NotNull;
+import javax.persistence.Id;
+import java.io.Serializable;
+import java.util.Objects;
 
-
-@Embeddable
 public class ResponsableEconomicoPK implements Serializable {
-
-    @Basic(optional = false)
-    @NotNull
-    @Column(name = "id")
     private int id;
-    @Basic(optional = false)
-    @NotNull
-    @Column(name = "administrador")
     private int administrador;
 
-    public ResponsableEconomicoPK() {
-    }
-
-    public ResponsableEconomicoPK(int id, int administrador) {
-        this.id = id;
-        this.administrador = administrador;
-    }
-
+    @Column(name = "id", nullable = false)
+    @Id
     public int getId() {
         return id;
     }
@@ -40,6 +19,8 @@ public class ResponsableEconomicoPK implements Serializable {
         this.id = id;
     }
 
+    @Column(name = "administrador", nullable = false)
+    @Id
     public int getAdministrador() {
         return administrador;
     }
@@ -49,32 +30,16 @@ public class ResponsableEconomicoPK implements Serializable {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ResponsableEconomicoPK that = (ResponsableEconomicoPK) o;
+        return id == that.id &&
+              administrador == that.administrador;
+    }
+
+    @Override
     public int hashCode() {
-        int hash = 0;
-        hash += (int) id;
-        hash += (int) administrador;
-        return hash;
+        return Objects.hash(id, administrador);
     }
-
-    @Override
-    public boolean equals(Object object) {
-        // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof ResponsableEconomicoPK)) {
-            return false;
-        }
-        ResponsableEconomicoPK other = (ResponsableEconomicoPK) object;
-        if (this.id != other.id) {
-            return false;
-        }
-        if (this.administrador != other.administrador) {
-            return false;
-        }
-        return true;
-    }
-
-    @Override
-    public String toString() {
-        return "entities.ResponsableEconomicoPK[ id=" + id + ", administrador=" + administrador + " ]";
-    }
-    
 }

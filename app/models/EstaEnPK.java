@@ -1,37 +1,16 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package models;
 
-import java.io.Serializable;
-import javax.persistence.Basic;
 import javax.persistence.Column;
-import javax.persistence.Embeddable;
-import javax.validation.constraints.NotNull;
+import javax.persistence.Id;
+import java.io.Serializable;
+import java.util.Objects;
 
-
-@Embeddable
 public class EstaEnPK implements Serializable {
-
-    @Basic(optional = false)
-    @NotNull
-    @Column(name = "alumno")
     private int alumno;
-    @Basic(optional = false)
-    @NotNull
-    @Column(name = "centro")
     private int centro;
 
-    public EstaEnPK() {
-    }
-
-    public EstaEnPK(int alumno, int centro) {
-        this.alumno = alumno;
-        this.centro = centro;
-    }
-
+    @Column(name = "alumno", nullable = false)
+    @Id
     public int getAlumno() {
         return alumno;
     }
@@ -40,6 +19,8 @@ public class EstaEnPK implements Serializable {
         this.alumno = alumno;
     }
 
+    @Column(name = "centro", nullable = false)
+    @Id
     public int getCentro() {
         return centro;
     }
@@ -49,32 +30,16 @@ public class EstaEnPK implements Serializable {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        EstaEnPK estaEnPK = (EstaEnPK) o;
+        return alumno == estaEnPK.alumno &&
+              centro == estaEnPK.centro;
+    }
+
+    @Override
     public int hashCode() {
-        int hash = 0;
-        hash += (int) alumno;
-        hash += (int) centro;
-        return hash;
+        return Objects.hash(alumno, centro);
     }
-
-    @Override
-    public boolean equals(Object object) {
-        // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof EstaEnPK)) {
-            return false;
-        }
-        EstaEnPK other = (EstaEnPK) object;
-        if (this.alumno != other.alumno) {
-            return false;
-        }
-        if (this.centro != other.centro) {
-            return false;
-        }
-        return true;
-    }
-
-    @Override
-    public String toString() {
-        return "entities.EstaEnPK[ alumno=" + alumno + ", centro=" + centro + " ]";
-    }
-    
 }

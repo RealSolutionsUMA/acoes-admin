@@ -1,90 +1,50 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package models;
 
-import java.io.Serializable;
-import java.util.Collection;
-import java.util.Date;
-import javax.persistence.Basic;
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.EmbeddedId;
-import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
-import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
-import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
-import javax.validation.constraints.NotNull;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlTransient;
-
+import javax.persistence.*;
+import java.sql.Date;
+import java.util.Objects;
 
 @Entity
-@Table(name = "apadrinamiento")
-@XmlRootElement
-@NamedQueries({
-    @NamedQuery(name = "Apadrinamiento.findAll", query = "SELECT a FROM Apadrinamiento a")
-    , @NamedQuery(name = "Apadrinamiento.findById", query = "SELECT a FROM Apadrinamiento a WHERE a.apadrinamientoPK.id = :id")
-    , @NamedQuery(name = "Apadrinamiento.findByApadrinado", query = "SELECT a FROM Apadrinamiento a WHERE a.apadrinamientoPK.apadrinado = :apadrinado")
-    , @NamedQuery(name = "Apadrinamiento.findByPadrino", query = "SELECT a FROM Apadrinamiento a WHERE a.apadrinamientoPK.padrino = :padrino")
-    , @NamedQuery(name = "Apadrinamiento.findByFechaInicio", query = "SELECT a FROM Apadrinamiento a WHERE a.fechaInicio = :fechaInicio")
-    , @NamedQuery(name = "Apadrinamiento.findByFechaFin", query = "SELECT a FROM Apadrinamiento a WHERE a.fechaFin = :fechaFin")})
-public class Apadrinamiento implements Serializable {
-
-    private static final long serialVersionUID = 1L;
-    @EmbeddedId
-    protected ApadrinamientoPK apadrinamientoPK;
-    @Basic(optional = false)
-    @NotNull
-    @Column(name = "fecha_inicio")
-    @Temporal(TemporalType.DATE)
+@IdClass(ApadrinamientoPK.class)
+public class Apadrinamiento {
+    private int id;
+    private int apadrinado;
+    private int padrino;
     private Date fechaInicio;
-    @Column(name = "fecha_fin")
-    @Temporal(TemporalType.DATE)
     private Date fechaFin;
-    @JoinColumn(name = "apadrinado", referencedColumnName = "id", insertable = false, updatable = false)
-    @ManyToOne(optional = false)
-    private Apadrinable apadrinable;
-    @JoinColumn(name = "padrino", referencedColumnName = "numero_de_socio", insertable = false, updatable = false)
-    @ManyToOne(optional = false)
-    private Socio socio;
-    @OneToOne(cascade = CascadeType.ALL, mappedBy = "apadrinamiento")
-    private Envio envio;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "apadrinamiento1")
-    private Collection<AdministracionApadrinamiento> administracionApadrinamientoCollection;
 
-    public Apadrinamiento() {
+    @Id
+    @Column(name = "id", nullable = false)
+    public int getId() {
+        return id;
     }
 
-    public Apadrinamiento(ApadrinamientoPK apadrinamientoPK) {
-        this.apadrinamientoPK = apadrinamientoPK;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public Apadrinamiento(ApadrinamientoPK apadrinamientoPK, Date fechaInicio) {
-        this.apadrinamientoPK = apadrinamientoPK;
-        this.fechaInicio = fechaInicio;
+    @Id
+    @Column(name = "apadrinado", nullable = false)
+    public int getApadrinado() {
+        return apadrinado;
     }
 
-    public Apadrinamiento(int id, int apadrinado, int padrino) {
-        this.apadrinamientoPK = new ApadrinamientoPK(id, apadrinado, padrino);
+    public void setApadrinado(int apadrinado) {
+        this.apadrinado = apadrinado;
     }
 
-    public ApadrinamientoPK getApadrinamientoPK() {
-        return apadrinamientoPK;
+    @Id
+    @Column(name = "padrino", nullable = false)
+    public int getPadrino() {
+        return padrino;
     }
 
-    public void setApadrinamientoPK(ApadrinamientoPK apadrinamientoPK) {
-        this.apadrinamientoPK = apadrinamientoPK;
+    public void setPadrino(int padrino) {
+        this.padrino = padrino;
     }
 
+    @Basic
+    @Column(name = "fecha_inicio", nullable = false)
     public Date getFechaInicio() {
         return fechaInicio;
     }
@@ -93,6 +53,8 @@ public class Apadrinamiento implements Serializable {
         this.fechaInicio = fechaInicio;
     }
 
+    @Basic
+    @Column(name = "fecha_fin", nullable = true)
     public Date getFechaFin() {
         return fechaFin;
     }
@@ -101,62 +63,20 @@ public class Apadrinamiento implements Serializable {
         this.fechaFin = fechaFin;
     }
 
-    public Apadrinable getApadrinable() {
-        return apadrinable;
-    }
-
-    public void setApadrinable(Apadrinable apadrinable) {
-        this.apadrinable = apadrinable;
-    }
-
-    public Socio getSocio() {
-        return socio;
-    }
-
-    public void setSocio(Socio socio) {
-        this.socio = socio;
-    }
-
-    public Envio getEnvio() {
-        return envio;
-    }
-
-    public void setEnvio(Envio envio) {
-        this.envio = envio;
-    }
-
-    @XmlTransient
-    public Collection<AdministracionApadrinamiento> getAdministracionApadrinamientoCollection() {
-        return administracionApadrinamientoCollection;
-    }
-
-    public void setAdministracionApadrinamientoCollection(Collection<AdministracionApadrinamiento> administracionApadrinamientoCollection) {
-        this.administracionApadrinamientoCollection = administracionApadrinamientoCollection;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Apadrinamiento that = (Apadrinamiento) o;
+        return id == that.id &&
+              apadrinado == that.apadrinado &&
+              padrino == that.padrino &&
+              Objects.equals(fechaInicio, that.fechaInicio) &&
+              Objects.equals(fechaFin, that.fechaFin);
     }
 
     @Override
     public int hashCode() {
-        int hash = 0;
-        hash += (apadrinamientoPK != null ? apadrinamientoPK.hashCode() : 0);
-        return hash;
+        return Objects.hash(id, apadrinado, padrino, fechaInicio, fechaFin);
     }
-
-    @Override
-    public boolean equals(Object object) {
-        // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Apadrinamiento)) {
-            return false;
-        }
-        Apadrinamiento other = (Apadrinamiento) object;
-        if ((this.apadrinamientoPK == null && other.apadrinamientoPK != null) || (this.apadrinamientoPK != null && !this.apadrinamientoPK.equals(other.apadrinamientoPK))) {
-            return false;
-        }
-        return true;
-    }
-
-    @Override
-    public String toString() {
-        return "entities.Apadrinamiento[ apadrinamientoPK=" + apadrinamientoPK + " ]";
-    }
-    
 }

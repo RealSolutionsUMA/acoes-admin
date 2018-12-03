@@ -1,153 +1,42 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package models;
 
-import java.io.Serializable;
-import java.util.Collection;
-import java.util.Date;
-import javax.persistence.Basic;
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
-import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
-import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlTransient;
-
+import javax.persistence.*;
+import java.sql.Date;
+import java.util.Objects;
 
 @Entity
-@Table(name = "alumno")
-@XmlRootElement
-@NamedQueries({
-    @NamedQuery(name = "Alumno.findAll", query = "SELECT a FROM Alumno a")
-    , @NamedQuery(name = "Alumno.findByCodigo", query = "SELECT a FROM Alumno a WHERE a.codigo = :codigo")
-    , @NamedQuery(name = "Alumno.findByNombre", query = "SELECT a FROM Alumno a WHERE a.nombre = :nombre")
-    , @NamedQuery(name = "Alumno.findByApellidos", query = "SELECT a FROM Alumno a WHERE a.apellidos = :apellidos")
-    , @NamedQuery(name = "Alumno.findByEstado", query = "SELECT a FROM Alumno a WHERE a.estado = :estado")
-    , @NamedQuery(name = "Alumno.findBySexo", query = "SELECT a FROM Alumno a WHERE a.sexo = :sexo")
-    , @NamedQuery(name = "Alumno.findByFoto", query = "SELECT a FROM Alumno a WHERE a.foto = :foto")
-    , @NamedQuery(name = "Alumno.findByFechaNacimiento", query = "SELECT a FROM Alumno a WHERE a.fechaNacimiento = :fechaNacimiento")
-    , @NamedQuery(name = "Alumno.findByFechaEntradaAcoes", query = "SELECT a FROM Alumno a WHERE a.fechaEntradaAcoes = :fechaEntradaAcoes")
-    , @NamedQuery(name = "Alumno.findByFechaAlta", query = "SELECT a FROM Alumno a WHERE a.fechaAlta = :fechaAlta")
-    , @NamedQuery(name = "Alumno.findByFechaSalidaAcoes", query = "SELECT a FROM Alumno a WHERE a.fechaSalidaAcoes = :fechaSalidaAcoes")
-    , @NamedQuery(name = "Alumno.findByGradoCurso", query = "SELECT a FROM Alumno a WHERE a.gradoCurso = :gradoCurso")
-    , @NamedQuery(name = "Alumno.findByColoniaProcedencia", query = "SELECT a FROM Alumno a WHERE a.coloniaProcedencia = :coloniaProcedencia")
-    , @NamedQuery(name = "Alumno.findByColoniaActual", query = "SELECT a FROM Alumno a WHERE a.coloniaActual = :coloniaActual")
-    , @NamedQuery(name = "Alumno.findByObservaciones", query = "SELECT a FROM Alumno a WHERE a.observaciones = :observaciones")})
-public class Alumno implements Serializable {
-
-    private static final long serialVersionUID = 1L;
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Basic(optional = false)
-    @Column(name = "codigo")
-    private Integer codigo;
-    @Basic(optional = false)
-    @NotNull
-    @Size(min = 1, max = 45)
-    @Column(name = "nombre")
+public class Alumno {
+    public enum Sexo{
+        Masculino,
+        Femenino
+    }
+    private int codigo;
     private String nombre;
-    @Basic(optional = false)
-    @NotNull
-    @Size(min = 1, max = 45)
-    @Column(name = "apellidos")
     private String apellidos;
-    @Size(max = 15)
-    @Column(name = "estado")
     private String estado;
-    @Basic(optional = false)
-    @NotNull
-    @Size(min = 1, max = 9)
-    @Column(name = "sexo")
-    private String sexo;
-    @Size(max = 100)
-    @Column(name = "foto")
+    private Sexo sexo;
     private String foto;
-    @Basic(optional = false)
-    @NotNull
-    @Column(name = "fecha_nacimiento")
-    @Temporal(TemporalType.DATE)
     private Date fechaNacimiento;
-    @Basic(optional = false)
-    @NotNull
-    @Column(name = "fecha_entrada_acoes")
-    @Temporal(TemporalType.DATE)
     private Date fechaEntradaAcoes;
-    @Basic(optional = false)
-    @NotNull
-    @Column(name = "fecha_alta")
-    @Temporal(TemporalType.DATE)
     private Date fechaAlta;
-    @Column(name = "fecha_salida_acoes")
-    @Temporal(TemporalType.DATE)
     private Date fechaSalidaAcoes;
-    @Basic(optional = false)
-    @NotNull
-    @Column(name = "grado_curso")
     private int gradoCurso;
-    @Basic(optional = false)
-    @NotNull
-    @Size(min = 1, max = 45)
-    @Column(name = "colonia_procedencia")
     private String coloniaProcedencia;
-    @Basic(optional = false)
-    @NotNull
-    @Size(min = 1, max = 45)
-    @Column(name = "colonia_actual")
     private String coloniaActual;
-    @Size(max = 100)
-    @Column(name = "observaciones")
     private String observaciones;
-    @OneToOne(cascade = CascadeType.ALL, mappedBy = "alumno")
-    private Apadrinable apadrinable;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "alumno1")
-    private Collection<EstaEn> estaEnCollection;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "codigoBeneficiario")
-    private Collection<RegistroEconomico> registroEconomicoCollection;
-    @OneToOne(cascade = CascadeType.ALL, mappedBy = "alumno")
-    private Becado becado;
 
-    public Alumno() {
-    }
-
-    public Alumno(Integer codigo) {
-        this.codigo = codigo;
-    }
-
-    public Alumno(Integer codigo, String nombre, String apellidos, String sexo, Date fechaNacimiento, Date fechaEntradaAcoes, Date fechaAlta, int gradoCurso, String coloniaProcedencia, String coloniaActual) {
-        this.codigo = codigo;
-        this.nombre = nombre;
-        this.apellidos = apellidos;
-        this.sexo = sexo;
-        this.fechaNacimiento = fechaNacimiento;
-        this.fechaEntradaAcoes = fechaEntradaAcoes;
-        this.fechaAlta = fechaAlta;
-        this.gradoCurso = gradoCurso;
-        this.coloniaProcedencia = coloniaProcedencia;
-        this.coloniaActual = coloniaActual;
-    }
-
-    public Integer getCodigo() {
+    @Id
+    @Column(name = "codigo", nullable = false)
+    public int getCodigo() {
         return codigo;
     }
 
-    public void setCodigo(Integer codigo) {
+    public void setCodigo(int codigo) {
         this.codigo = codigo;
     }
 
+    @Basic
+    @Column(name = "nombre", nullable = false, length = 45)
     public String getNombre() {
         return nombre;
     }
@@ -156,6 +45,8 @@ public class Alumno implements Serializable {
         this.nombre = nombre;
     }
 
+    @Basic
+    @Column(name = "apellidos", nullable = false, length = 45)
     public String getApellidos() {
         return apellidos;
     }
@@ -164,6 +55,8 @@ public class Alumno implements Serializable {
         this.apellidos = apellidos;
     }
 
+    @Basic
+    @Column(name = "estado", nullable = true, length = 15)
     public String getEstado() {
         return estado;
     }
@@ -172,14 +65,18 @@ public class Alumno implements Serializable {
         this.estado = estado;
     }
 
-    public String getSexo() {
+    @Enumerated(EnumType.STRING)
+    @Column(name = "sexo", columnDefinition = "ENUM('Masculino', 'Femenino')", nullable = false)
+    public Sexo getSexo() {
         return sexo;
     }
 
-    public void setSexo(String sexo) {
+    public void setSexo(Sexo sexo) {
         this.sexo = sexo;
     }
 
+    @Basic
+    @Column(name = "foto", nullable = true, length = 100)
     public String getFoto() {
         return foto;
     }
@@ -188,6 +85,8 @@ public class Alumno implements Serializable {
         this.foto = foto;
     }
 
+    @Basic
+    @Column(name = "fecha_nacimiento", nullable = false)
     public Date getFechaNacimiento() {
         return fechaNacimiento;
     }
@@ -196,6 +95,8 @@ public class Alumno implements Serializable {
         this.fechaNacimiento = fechaNacimiento;
     }
 
+    @Basic
+    @Column(name = "fecha_entrada_acoes", nullable = false)
     public Date getFechaEntradaAcoes() {
         return fechaEntradaAcoes;
     }
@@ -204,6 +105,8 @@ public class Alumno implements Serializable {
         this.fechaEntradaAcoes = fechaEntradaAcoes;
     }
 
+    @Basic
+    @Column(name = "fecha_alta", nullable = false)
     public Date getFechaAlta() {
         return fechaAlta;
     }
@@ -212,6 +115,8 @@ public class Alumno implements Serializable {
         this.fechaAlta = fechaAlta;
     }
 
+    @Basic
+    @Column(name = "fecha_salida_acoes", nullable = true)
     public Date getFechaSalidaAcoes() {
         return fechaSalidaAcoes;
     }
@@ -220,6 +125,8 @@ public class Alumno implements Serializable {
         this.fechaSalidaAcoes = fechaSalidaAcoes;
     }
 
+    @Basic
+    @Column(name = "grado_curso", nullable = false)
     public int getGradoCurso() {
         return gradoCurso;
     }
@@ -228,6 +135,8 @@ public class Alumno implements Serializable {
         this.gradoCurso = gradoCurso;
     }
 
+    @Basic
+    @Column(name = "colonia_procedencia", nullable = false, length = 45)
     public String getColoniaProcedencia() {
         return coloniaProcedencia;
     }
@@ -236,6 +145,8 @@ public class Alumno implements Serializable {
         this.coloniaProcedencia = coloniaProcedencia;
     }
 
+    @Basic
+    @Column(name = "colonia_actual", nullable = false, length = 45)
     public String getColoniaActual() {
         return coloniaActual;
     }
@@ -244,6 +155,8 @@ public class Alumno implements Serializable {
         this.coloniaActual = coloniaActual;
     }
 
+    @Basic
+    @Column(name = "observaciones", nullable = true, length = 100)
     public String getObservaciones() {
         return observaciones;
     }
@@ -252,63 +165,29 @@ public class Alumno implements Serializable {
         this.observaciones = observaciones;
     }
 
-    public Apadrinable getApadrinable() {
-        return apadrinable;
-    }
-
-    public void setApadrinable(Apadrinable apadrinable) {
-        this.apadrinable = apadrinable;
-    }
-
-    @XmlTransient
-    public Collection<EstaEn> getEstaEnCollection() {
-        return estaEnCollection;
-    }
-
-    public void setEstaEnCollection(Collection<EstaEn> estaEnCollection) {
-        this.estaEnCollection = estaEnCollection;
-    }
-
-    @XmlTransient
-    public Collection<RegistroEconomico> getRegistroEconomicoCollection() {
-        return registroEconomicoCollection;
-    }
-
-    public void setRegistroEconomicoCollection(Collection<RegistroEconomico> registroEconomicoCollection) {
-        this.registroEconomicoCollection = registroEconomicoCollection;
-    }
-
-    public Becado getBecado() {
-        return becado;
-    }
-
-    public void setBecado(Becado becado) {
-        this.becado = becado;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Alumno alumno = (Alumno) o;
+        return codigo == alumno.codigo &&
+              gradoCurso == alumno.gradoCurso &&
+              Objects.equals(nombre, alumno.nombre) &&
+              Objects.equals(apellidos, alumno.apellidos) &&
+              Objects.equals(estado, alumno.estado) &&
+              Objects.equals(sexo, alumno.sexo) &&
+              Objects.equals(foto, alumno.foto) &&
+              Objects.equals(fechaNacimiento, alumno.fechaNacimiento) &&
+              Objects.equals(fechaEntradaAcoes, alumno.fechaEntradaAcoes) &&
+              Objects.equals(fechaAlta, alumno.fechaAlta) &&
+              Objects.equals(fechaSalidaAcoes, alumno.fechaSalidaAcoes) &&
+              Objects.equals(coloniaProcedencia, alumno.coloniaProcedencia) &&
+              Objects.equals(coloniaActual, alumno.coloniaActual) &&
+              Objects.equals(observaciones, alumno.observaciones);
     }
 
     @Override
     public int hashCode() {
-        int hash = 0;
-        hash += (codigo != null ? codigo.hashCode() : 0);
-        return hash;
+        return Objects.hash(codigo, nombre, apellidos, estado, sexo, foto, fechaNacimiento, fechaEntradaAcoes, fechaAlta, fechaSalidaAcoes, gradoCurso, coloniaProcedencia, coloniaActual, observaciones);
     }
-
-    @Override
-    public boolean equals(Object object) {
-        // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Alumno)) {
-            return false;
-        }
-        Alumno other = (Alumno) object;
-        if ((this.codigo == null && other.codigo != null) || (this.codigo != null && !this.codigo.equals(other.codigo))) {
-            return false;
-        }
-        return true;
-    }
-
-    @Override
-    public String toString() {
-        return "entities.Alumno[ codigo=" + codigo + " ]";
-    }
-    
 }

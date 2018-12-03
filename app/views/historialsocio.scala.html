@@ -3,7 +3,7 @@
 *@
 
 
-@* @(socio : Socio, apadrinamientos : List<apadrinamiento>) *@
+@* @(socio : Socio, apadrinamientos : List[apadrinamiento]) *@
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -19,7 +19,7 @@
                 <th>Fecha de fin</th>
                 <th>Eliminar</th>
             </tr>
-            @* @(ap <- apadrinamientos){
+            @* @for(ap <- apadrinamientos){
             <tr>
                 <td>@ap.apadrinado</td>
                 <td>@ap.fechaInicio</td>

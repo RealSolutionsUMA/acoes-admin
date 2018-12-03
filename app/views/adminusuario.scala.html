@@ -1,0 +1,43 @@
+@* Muestra los usuarios del sistema. El boton modificar lleva a la vista de modificacion.
+El boton Eliminar elimina al usuario. El boton añadir lleva  ala vista de añadir usuario.*@
+@* @(listUsuarios: List<Usuario>) *@
+<!DOCTYPE>
+<html lang="en">
+    <header>
+        <meta charset="UTF-8">
+        <title>Administracion de usuarios</title>
+    </header>
+    <body>
+        <h1>Administracion de usuarios</h1>
+        <table>
+            <tr>
+                <td>
+                    <div align="center">
+                        <table border="1">
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Rol</th>
+                                <th>ID</th>
+                                <th>Modificar</th>
+                                <th>Eliminar</th>
+
+                            </tr>
+                            @* @for (u <- listUsuarios)
+                            <tr>
+                            <td>@u.nombre</td>
+                            <td>@u.rol</td>
+                            <td>@u.ID</td>
+                            <td><input type="button" value="Modificar"</td>
+                            <td><input type="button" value="Eliminar"></td>
+                            </tr>
+                            } *@
+                        </table>
+                    </div>
+                </td>
+                <td>
+                    <input type="button" value="Añadir">
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

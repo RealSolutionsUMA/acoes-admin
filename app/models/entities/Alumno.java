@@ -1,10 +1,11 @@
-package models;
+package models.entities;
 
 import javax.persistence.*;
 import java.sql.Date;
 import java.util.Objects;
 
 @Entity
+@Table(name="alumno")
 public class Alumno {
     public enum Sexo{
         Masculino,
@@ -66,7 +67,7 @@ public class Alumno {
     }
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "sexo", columnDefinition = "ENUM('Masculino', 'Femenino')", nullable = false)
+    @Column(name = "sexo", columnDefinition = "enum('Masculino', 'Femenino')", nullable = false)
     public Sexo getSexo() {
         return sexo;
     }

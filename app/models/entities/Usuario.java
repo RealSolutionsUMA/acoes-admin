@@ -1,18 +1,30 @@
-package models;
+package models.entities;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
+@Table(name = "usuario")
+@NamedQueries({
+      @NamedQuery(name = "Usuario.findByEmail", query = "SELECT u FROM Usuario u WHERE u.email = :email")
+      @NamedQuery(name = "Usuario.findAll", query = "SELECT u FROM Usuario u")
+})
 public class Usuario {
+    public enum Rol {
+        Agente,
+        GerenteSede,
+        GerenteRegional,
+        CoordinadorLocal,
+        CoordinadorGeneral,
+        AdministradorLocal,
+        AdministradorGeneral
+    }
+
     private int id;
     private String nombre;
     private String email;
     private String contrasena;
-    private Object rol;
+    private Rol rol;
 
     @Id
     @Column(name = "id", nullable = false)
@@ -54,13 +66,16 @@ public class Usuario {
         this.contrasena = contrasena;
     }
 
-    @Basic
-    @Column(name = "rol", nullable = false)
-    public Object getRol() {
+    @Enumerated(EnumType.STRING)
+    @Column(name = "rol",
+          columnDefinition = "enum('Agente', 'GerenteSede', 'GerenteRegional', 'CoordinadorLocal', " +
+                "'CoordinadorGeneral', 'AdministradorLocal', 'AdministradorGeneral'"
+          , nullable = false)
+    public Rol getRol() {
         return rol;
     }
 
-    public void setRol(Object rol) {
+    public void setRol(Rol rol) {
         this.rol = rol;
     }
 

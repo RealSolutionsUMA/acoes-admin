@@ -4,6 +4,7 @@ import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
+@Table(name = "sede")
 @NamedQuery(name = "Sede.findAll", query = "SELECT s FROM Sede s")
 public class Sede {
     public enum Region {
@@ -22,14 +23,12 @@ public class Sede {
         this.id = id;
     }
 
-    @Basic
-    @Column(name = "region", nullable = false)
+    @Enumerated(EnumType.STRING)
+    @Column(name = "region", columnDefinition = "enum('Espana')", nullable = false)
     public Region getRegion() {
         return region;
     }
 
-    @Enumerated(EnumType.STRING)
-    @Column(name = "region", columnDefinition = "ENUM('Espana')", nullable = false)
     public void setRegion(Region region) {
         this.region = region;
     }

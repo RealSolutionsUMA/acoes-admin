@@ -1,11 +1,13 @@
-package models;
+package models.entities;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 import java.util.Objects;
 
 @Entity
+@Table(name = "agentes")
 public class Agentes {
     private int id;
 

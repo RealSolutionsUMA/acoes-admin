@@ -1,16 +1,18 @@
-package models;
+package models.entities;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
 public class Envio {
+    public enum Estado {
+        Preparado,
+        Enviado,
+        Recibido
+    }
     private int id;
     private int apadrinamiento;
-    private Object estado;
+    private Estado estado;
 
     @Id
     @Column(name = "id", nullable = false)
@@ -32,13 +34,13 @@ public class Envio {
         this.apadrinamiento = apadrinamiento;
     }
 
-    @Basic
-    @Column(name = "estado", nullable = false)
-    public Object getEstado() {
+    @Enumerated(EnumType.STRING)
+    @Column(name = "estado", columnDefinition = "enum('Preparado', 'Enviado', 'Recibido')", nullable = false)
+    public Estado getEstado() {
         return estado;
     }
 
-    public void setEstado(Object estado) {
+    public void setEstado(Estado estado) {
         this.estado = estado;
     }
 

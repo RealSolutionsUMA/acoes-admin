@@ -11,10 +11,10 @@ import java.util.stream.Stream;
 
 import static java.util.concurrent.CompletableFuture.supplyAsync;
 
-public class JPASedeRepositoryImpl extends JPAAbstractRepository<Sede> {
+public class JPASedeRepository extends JPAAbstractRepository<Sede> {
 
     @Inject
-    public JPASedeRepositoryImpl(JPAApi jpaApi, DatabaseExecutionContext executionContext) {
+    public JPASedeRepository(JPAApi jpaApi, DatabaseExecutionContext executionContext) {
         super(jpaApi, executionContext);
     }
 
@@ -23,7 +23,7 @@ public class JPASedeRepositoryImpl extends JPAAbstractRepository<Sede> {
         return supplyAsync(() -> wrap(this::list), executionContext);
     }
 
-    public Stream<Sede> list(EntityManager em) {
+    private Stream<Sede> list(EntityManager em) {
         List<Sede> sedes = em.createNamedQuery("Sede.findAll", Sede.class).getResultList();
         return sedes.stream();
     }

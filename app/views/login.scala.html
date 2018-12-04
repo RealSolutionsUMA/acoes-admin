@@ -1,3 +1,7 @@
+@import models.entities.Usuario
+
+@(userForm: Form[Usuario])
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -5,16 +9,17 @@
         <title>Login</title>
     </head>
     <body>
-
         <div class="login-page">
             <div class="form">
-                <form class="login-form" action="indexagente">
-                    <input type="text" placeholder="username"/>
-                    <input type="password" placeholder="password"/>
-                    <input type="button" value="Login"/>
-                    <p class="message">No se acuerda de la contraseña? <a href="recuperarcontra.scala.html">recuperar contraseña</a></p>
-                </form>
+                @helper.form(action = routes.SessionController.login()) {
+                    @helper.inputText(userForm("email"))
+                    @helper.inputPassword(userForm("contrasena"))
+                    <button value="Login"></button>
+                }
             </div>
+            <p class="message">¿No se acuerda de la contraseña?
+                <a href="@routes.SessionController.forgotPassword">Recuperar contraseña</a>
+            </p>
         </div>
 
     </body>

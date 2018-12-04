@@ -1,4 +1,4 @@
-package models;
+package models.entities;
 
 import javax.persistence.*;
 import java.sql.Date;
@@ -7,9 +7,13 @@ import java.util.Objects;
 @Entity
 @Table(name = "registro_economico", schema = "acoes", catalog = "")
 public class RegistroEconomico {
+    public enum Tipo {
+        Ingreso,
+        Egreso
+    }
     private int id;
     private Date fecha;
-    private Object tipo;
+    private Tipo tipo;
     private String concepto;
     private double importe;
     private int codigoBeneficiario;
@@ -39,13 +43,13 @@ public class RegistroEconomico {
         this.fecha = fecha;
     }
 
-    @Basic
-    @Column(name = "tipo", nullable = false)
-    public Object getTipo() {
+    @Enumerated(EnumType.STRING)
+    @Column(name = "tipo", columnDefinition = "enum('Ingreso', 'Egreso')", nullable = false)
+    public Tipo getTipo() {
         return tipo;
     }
 
-    public void setTipo(Object tipo) {
+    public void setTipo(Tipo tipo) {
         this.tipo = tipo;
     }
 

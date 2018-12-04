@@ -1,9 +1,10 @@
-package models;
+package models.entities;
 
 import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
+@NamedQuery(name = "Sede.findAll", query = "SELECT s FROM Sede s")
 public class Sede {
     public enum Region {
         Espana

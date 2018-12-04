@@ -40,6 +40,7 @@
                                 <th>Colonia de procedencia</th>
                                 <th>Colonia actual</th>
                                 <th>Observaciones</th>
+                                <th>Apadrinar</th>
                             </tr>
                                 @* @for(a <- listaAlumnos) {
                             <tr>
@@ -57,6 +58,7 @@
                                 <td>@a.coloniaDeProcedencia</td>
                                 <td>@a.coloniaActual</td>
                                 <td>@a.observaciones</td>
+                                <td><input type="button" value="Apadrinar"></td>
                             </tr>
                         } *@
                         </table>

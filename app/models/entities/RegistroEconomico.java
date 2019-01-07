@@ -1,40 +1,107 @@
+
+
 package models.entities;
 
-import javax.persistence.*;
-import java.sql.Date;
-import java.util.Objects;
+import java.io.Serializable;
+import java.util.Date;
+import javax.persistence.Basic;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
+import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlRootElement;
+
 
 @Entity
-@Table(name = "registro_economico", schema = "acoes", catalog = "")
-public class RegistroEconomico {
-    public enum Tipo {
-        Ingreso,
-        Egreso
-    }
-    private int id;
-    private Date fecha;
-    private Tipo tipo;
-    private String concepto;
-    private double importe;
-    private int codigoBeneficiario;
-    private String observaciones;
-    private int codigoServicio;
-    private int responsable;
-    private int proyecto;
-    private int numeroSocio;
+@Table(name = "registro_economico")
+@XmlRootElement
+@NamedQueries({
+    @NamedQuery(name = "RegistroEconomico.findAll", query = "SELECT r FROM RegistroEconomico r")
+    , @NamedQuery(name = "RegistroEconomico.findById", query = "SELECT r FROM RegistroEconomico r WHERE r.id = :id")
+    , @NamedQuery(name = "RegistroEconomico.findByFecha", query = "SELECT r FROM RegistroEconomico r WHERE r.fecha = :fecha")
+    , @NamedQuery(name = "RegistroEconomico.findByTipo", query = "SELECT r FROM RegistroEconomico r WHERE r.tipo = :tipo")
+    , @NamedQuery(name = "RegistroEconomico.findByConcepto", query = "SELECT r FROM RegistroEconomico r WHERE r.concepto = :concepto")
+    , @NamedQuery(name = "RegistroEconomico.findByImporte", query = "SELECT r FROM RegistroEconomico r WHERE r.importe = :importe")
+    , @NamedQuery(name = "RegistroEconomico.findByObservaciones", query = "SELECT r FROM RegistroEconomico r WHERE r.observaciones = :observaciones")
+    , @NamedQuery(name = "RegistroEconomico.findByCodigoServicio", query = "SELECT r FROM RegistroEconomico r WHERE r.codigoServicio = :codigoServicio")})
+public class RegistroEconomico implements Serializable {
 
+    private static final long serialVersionUID = 1L;
     @Id
-    @Column(name = "id", nullable = false)
-    public int getId() {
-        return id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Basic(optional = false)
+    @Column(name = "id")
+    private Integer id;
+    @Basic(optional = false)
+    @NotNull
+    @Column(name = "fecha")
+    @Temporal(TemporalType.DATE)
+    private Date fecha;
+    @Basic(optional = false)
+    @NotNull
+    @Size(min = 1, max = 7)
+    @Column(name = "tipo")
+    private String tipo;
+    @Basic(optional = false)
+    @NotNull
+    @Size(min = 1, max = 45)
+    @Column(name = "concepto")
+    private String concepto;
+    @Basic(optional = false)
+    @NotNull
+    @Column(name = "importe")
+    private double importe;
+    @Size(max = 100)
+    @Column(name = "observaciones")
+    private String observaciones;
+    @Column(name = "codigo_servicio")
+    private Integer codigoServicio;
+    @JoinColumn(name = "numero_socio", referencedColumnName = "numero_de_socio")
+    @ManyToOne
+    private Socio numeroSocio;
+    @JoinColumn(name = "codigo_beneficiario", referencedColumnName = "codigo")
+    @ManyToOne
+    private Alumno codigoBeneficiario;
+    @JoinColumn(name = "responsable", referencedColumnName = "id")
+    @ManyToOne
+    private Usuario responsable;
+    @JoinColumn(name = "proyecto", referencedColumnName = "id")
+    @ManyToOne(optional = false)
+    private Proyecto proyecto;
+
+    public RegistroEconomico() {
     }
 
-    public void setId(int id) {
+    public RegistroEconomico(Integer id) {
         this.id = id;
     }
 
-    @Basic
-    @Column(name = "fecha", nullable = false)
+    public RegistroEconomico(Integer id, Date fecha, String tipo, String concepto, double importe) {
+        this.id = id;
+        this.fecha = fecha;
+        this.tipo = tipo;
+        this.concepto = concepto;
+        this.importe = importe;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
     public Date getFecha() {
         return fecha;
     }
@@ -43,18 +110,14 @@ public class RegistroEconomico {
         this.fecha = fecha;
     }
 
-    @Enumerated(EnumType.STRING)
-    @Column(name = "tipo", columnDefinition = "enum('Ingreso', 'Egreso')", nullable = false)
-    public Tipo getTipo() {
+    public String getTipo() {
         return tipo;
     }
 
-    public void setTipo(Tipo tipo) {
+    public void setTipo(String tipo) {
         this.tipo = tipo;
     }
 
-    @Basic
-    @Column(name = "concepto", nullable = false, length = 45)
     public String getConcepto() {
         return concepto;
     }
@@ -63,8 +126,6 @@ public class RegistroEconomico {
         this.concepto = concepto;
     }
 
-    @Basic
-    @Column(name = "importe", nullable = false, precision = 0)
     public double getImporte() {
         return importe;
     }
@@ -73,18 +134,6 @@ public class RegistroEconomico {
         this.importe = importe;
     }
 
-    @Basic
-    @Column(name = "codigo_beneficiario", nullable = false)
-    public int getCodigoBeneficiario() {
-        return codigoBeneficiario;
-    }
-
-    public void setCodigoBeneficiario(int codigoBeneficiario) {
-        this.codigoBeneficiario = codigoBeneficiario;
-    }
-
-    @Basic
-    @Column(name = "observaciones", nullable = true, length = 100)
     public String getObservaciones() {
         return observaciones;
     }
@@ -93,66 +142,69 @@ public class RegistroEconomico {
         this.observaciones = observaciones;
     }
 
-    @Basic
-    @Column(name = "codigo_servicio", nullable = false)
-    public int getCodigoServicio() {
+    public Integer getCodigoServicio() {
         return codigoServicio;
     }
 
-    public void setCodigoServicio(int codigoServicio) {
+    public void setCodigoServicio(Integer codigoServicio) {
         this.codigoServicio = codigoServicio;
     }
 
-    @Basic
-    @Column(name = "responsable", nullable = false)
-    public int getResponsable() {
-        return responsable;
-    }
-
-    public void setResponsable(int responsable) {
-        this.responsable = responsable;
-    }
-
-    @Basic
-    @Column(name = "proyecto", nullable = false)
-    public int getProyecto() {
-        return proyecto;
-    }
-
-    public void setProyecto(int proyecto) {
-        this.proyecto = proyecto;
-    }
-
-    @Basic
-    @Column(name = "numero_socio", nullable = false)
-    public int getNumeroSocio() {
+    public Socio getNumeroSocio() {
         return numeroSocio;
     }
 
-    public void setNumeroSocio(int numeroSocio) {
+    public void setNumeroSocio(Socio numeroSocio) {
         this.numeroSocio = numeroSocio;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        RegistroEconomico that = (RegistroEconomico) o;
-        return id == that.id &&
-              Double.compare(that.importe, importe) == 0 &&
-              codigoBeneficiario == that.codigoBeneficiario &&
-              codigoServicio == that.codigoServicio &&
-              responsable == that.responsable &&
-              proyecto == that.proyecto &&
-              numeroSocio == that.numeroSocio &&
-              Objects.equals(fecha, that.fecha) &&
-              Objects.equals(tipo, that.tipo) &&
-              Objects.equals(concepto, that.concepto) &&
-              Objects.equals(observaciones, that.observaciones);
+    public Alumno getCodigoBeneficiario() {
+        return codigoBeneficiario;
+    }
+
+    public void setCodigoBeneficiario(Alumno codigoBeneficiario) {
+        this.codigoBeneficiario = codigoBeneficiario;
+    }
+
+    public Usuario getResponsable() {
+        return responsable;
+    }
+
+    public void setResponsable(Usuario responsable) {
+        this.responsable = responsable;
+    }
+
+    public Proyecto getProyecto() {
+        return proyecto;
+    }
+
+    public void setProyecto(Proyecto proyecto) {
+        this.proyecto = proyecto;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, fecha, tipo, concepto, importe, codigoBeneficiario, observaciones, codigoServicio, responsable, proyecto, numeroSocio);
+        int hash = 0;
+        hash += (id != null ? id.hashCode() : 0);
+        return hash;
     }
+
+    @Override
+    public boolean equals(Object object) {
+        // TODO: Warning - this method won't work in the case the id fields are not set
+        if (!(object instanceof RegistroEconomico)) {
+            return false;
+        }
+        RegistroEconomico other = (RegistroEconomico) object;
+        if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
+            return false;
+        }
+        return true;
+    }
+
+    @Override
+    public String toString() {
+        return "models.entities.RegistroEconomico[ id=" + id + " ]";
+    }
+
 }

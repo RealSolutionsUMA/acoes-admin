@@ -2,7 +2,7 @@
 Aqui se va a mostrar la lista de socios para el/la agente.
 *@
 
-@* @(listSocios: List[Socio]) *@
+@* @(listSocios: List[Partner]) *@
 
 <!DOCTYPE html>
 <html lang="en">
@@ -13,7 +13,7 @@ Aqui se va a mostrar la lista de socios para el/la agente.
     <body>
         <table>
             <tr>
-                <td> <a href="indexagente.scala.html"> <b>Socios</b></a> </td>
+                <td> <a href="indexagente.scala.html"> <b>Partners</b></a> </td>
                 <td> <a href="indexalumnos.scala.html"> <b>Alumnos</b></a> </td>
             </tr>
             <tr>
@@ -47,7 +47,7 @@ Aqui se va a mostrar la lista de socios para el/la agente.
                                 <th>Modificar</th>
                                 <th>Eliminar</th>
                             </tr>
-                                @* @for(s <- listaSocios) {
+                                @* @for(s <- listaPartners) {
                                 <tr>
                                     <td>@s.nombre</td>
                                     <td>@s.apellidos</td>
@@ -70,7 +70,7 @@ Aqui se va a mostrar la lista de socios para el/la agente.
                         </table>
                         </form>
                         <form action="introducirsocio.scala.html">
-                            <input type="button" value="Añadir Socio">
+                            <input type="button" value="Añadir Partner">
                         </form>
                     </div>
                 </td>

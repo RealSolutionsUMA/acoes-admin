@@ -13,10 +13,9 @@ libraryDependencies ++= Seq(
   javaJpa,
   "org.mariadb.jdbc" % "mariadb-java-client" % "2.3.0",
   "org.hibernate" % "hibernate-core" % "5.3.6.Final",
-  "com.h2database" % "h2" % "1.4.197",
   javaWs % "test",
-  "javax.ejb" % "ejb-api" % "3.0" % "provided",
   guice,
+  "org.projectlombok" % "lombok" % "1.16.16"
 )
 
 PlayKeys.externalizeResources := false

@@ -1,6 +1,7 @@
 @import models.entities.Usuario
+@import helper._
 
-@(userForm: Form[Usuario])
+@(userForm: Form[Usuario], incorrectLogin : Boolean = false)
 
 <!DOCTYPE html>
 <html lang="en">
@@ -11,16 +12,22 @@
     <body>
         <div class="login-page">
             <div class="form">
-                @helper.form(action = routes.SessionController.login()) {
-                    @helper.inputText(userForm("email"))
-                    @helper.inputPassword(userForm("contrasena"))
-                    <button value="Login"></button>
+                @form(action = routes.SessionController.login()) {
+                    @helper.CSRF.formField
+                    @inputText(userForm("email"))
+                    @inputPassword(userForm("contrasena"))
+                    <button type="submit">Login</button>
                 }
             </div>
             <p class="message">¿No se acuerda de la contraseña?
-                <a href="@routes.SessionController.forgotPassword">Recuperar contraseña</a>
+                <!--TODO Add route -->
+                <a href="">Recuperar contraseña</a>
             </p>
         </div>
-
+        @if(incorrectLogin) {
+            <div>
+                <p style="color: #ff0000;"> Ha introducido un usuario incorrecto </p>
+            </div>
+        }
     </body>
 </html>

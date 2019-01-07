@@ -10,8 +10,10 @@ GET /versionedAssets/*file  controllers.Assets.versioned(file)
 # An example controller showing a sample home page
 GET     /                           controllers.SessionController.index
 
-GET     /login                      controllers.SessionController.login()
+POST    /login                      controllers.SessionController.login()
 
 GET     /hello                      controllers.HomeController.hello
 
-GET     /db                         controllers.HomeController.newSede()
+GET     /db                         controllers.HomeController.newHeadquarter()
+
+GET     /agent                      controllers.AgentController.listSocios()

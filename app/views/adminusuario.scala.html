@@ -2,7 +2,7 @@
 El boton Eliminar elimina al usuario. El boton añadir lleva ala vista de añadir usuario.*@
 @import java.util
 @import models.entities.Usuario
-@(listUsuarios: util.List[Usuario])
+@(listUsers: util.List[Usuario])
 <!DOCTYPE>
 <html lang="en">
     <header>
@@ -24,7 +24,7 @@ El boton Eliminar elimina al usuario. El boton añadir lleva ala vista de añadi
                                 <th>Eliminar</th>
 
                             </tr>
-                            @for(user <- listUsuarios) {
+                            @for(user <- listUsers) {
                                 <tr>
                                     <td>@user.getNombre</td>
                                     <td>@user.getRol</td>

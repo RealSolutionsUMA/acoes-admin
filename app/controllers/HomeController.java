@@ -1,16 +1,16 @@
 package controllers;
 
 import models.entities.Sede;
-import models.management.JPASedeRepository;
-import play.libs.concurrent.HttpExecutionContext;
+import models.entities.Usuario;
+import models.management.SedeRepository;
+import play.data.Form;
+import play.data.FormFactory;
 import play.mvc.Controller;
 import play.mvc.Result;
 import views.html.hello;
-import views.html.index;
+import views.html.login;
 
 import javax.inject.Inject;
-
-import java.util.concurrent.CompletionStage;
 
 import static play.libs.Json.toJson;
 
@@ -20,14 +20,15 @@ import static play.libs.Json.toJson;
  */
 public class HomeController extends Controller {
 
-    private final JPASedeRepository sedeRepository;
-    private final HttpExecutionContext ec;
+    private final SedeRepository sedeRepository;
+    private final FormFactory formFactory;
 
     @Inject
-    public HomeController(JPASedeRepository sedeRepository, HttpExecutionContext ec){
+    public HomeController(SedeRepository sedeRepository, FormFactory formFactory) {
         this.sedeRepository = sedeRepository;
-        this.ec = ec;
+        this.formFactory = formFactory;
     }
+
     /**
      * An action that renders an HTML page with a welcome message.
      * The configuration in the <code>routes</code> file means that
@@ -35,17 +36,18 @@ public class HomeController extends Controller {
      * <code>GET</code> request with a path of <code>/</code>.
      */
     public Result index() {
-        return ok(index.render("Your new application is ready."));
+        Form<Usuario> usuarioForm = formFactory.form(Usuario.class);
+        return ok(login.render(usuarioForm, false));
     }
 
     public Result hello() {
         return ok(hello.render());
     }
 
-    public CompletionStage<Result> newSede() {
+    public Result newHeadquarter() {
         Sede sede = new Sede();
-        sede.setRegion(Sede.Region.Espana);
-        return sedeRepository.add(sede)
-              .thenApplyAsync(s -> ok(toJson(s)), ec.current());
+        sede.setRegion("Espana");
+        sedeRepository.add(sede);
+        return ok(toJson(sede));
     }
 }

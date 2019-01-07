@@ -1,16 +1,34 @@
+
+
 package models.entities;
 
-import javax.persistence.Column;
-import javax.persistence.Id;
 import java.io.Serializable;
-import java.util.Objects;
+import javax.persistence.Basic;
+import javax.persistence.Column;
+import javax.persistence.Embeddable;
+import javax.validation.constraints.NotNull;
 
+
+@Embeddable
 public class EstaEnPK implements Serializable {
+
+    @Basic(optional = false)
+    @NotNull
+    @Column(name = "alumno")
     private int alumno;
+    @Basic(optional = false)
+    @NotNull
+    @Column(name = "centro")
     private int centro;
 
-    @Column(name = "alumno", nullable = false)
-    @Id
+    public EstaEnPK() {
+    }
+
+    public EstaEnPK(int alumno, int centro) {
+        this.alumno = alumno;
+        this.centro = centro;
+    }
+
     public int getAlumno() {
         return alumno;
     }
@@ -19,8 +37,6 @@ public class EstaEnPK implements Serializable {
         this.alumno = alumno;
     }
 
-    @Column(name = "centro", nullable = false)
-    @Id
     public int getCentro() {
         return centro;
     }
@@ -30,16 +46,32 @@ public class EstaEnPK implements Serializable {
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        EstaEnPK estaEnPK = (EstaEnPK) o;
-        return alumno == estaEnPK.alumno &&
-              centro == estaEnPK.centro;
+    public int hashCode() {
+        int hash = 0;
+        hash += (int) alumno;
+        hash += (int) centro;
+        return hash;
     }
 
     @Override
-    public int hashCode() {
-        return Objects.hash(alumno, centro);
+    public boolean equals(Object object) {
+        // TODO: Warning - this method won't work in the case the id fields are not set
+        if (!(object instanceof EstaEnPK)) {
+            return false;
+        }
+        EstaEnPK other = (EstaEnPK) object;
+        if (this.alumno != other.alumno) {
+            return false;
+        }
+        if (this.centro != other.centro) {
+            return false;
+        }
+        return true;
     }
+
+    @Override
+    public String toString() {
+        return "models.entities.EstaEnPK[ alumno=" + alumno + ", centro=" + centro + " ]";
+    }
+
 }

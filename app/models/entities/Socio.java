@@ -1,45 +1,169 @@
+
+
 package models.entities;
 
+import java.io.Serializable;
+import java.util.Collection;
+import java.util.Date;
 import javax.persistence.Basic;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import java.sql.Date;
-import java.util.Objects;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
+
 
 @Entity
-public class Socio {
-    private int numeroDeSocio;
-    private String nombre;
-    private String apellidos;
-    private String estado;
-    private String nif;
-    private String direccion;
-    private String poblacion;
-    private String codigoPostal;
-    private String provincia;
-    private Integer telefonoFijo;
-    private int telefonoMovil;
-    private String email;
-    private String relacion;
-    private boolean certificado;
-    private String sector;
-    private Date fechaAlta;
-    private Date fechaBaja;
-    private String observaciones;
+@Table(name = "socio")
+@XmlRootElement
+@NamedQueries({
+    @NamedQuery(name = "Socio.findAll", query = "SELECT s FROM Socio s")
+    , @NamedQuery(name = "Socio.findByNumeroDeSocio", query = "SELECT s FROM Socio s WHERE s.numeroDeSocio = :numeroDeSocio")
+    , @NamedQuery(name = "Socio.findByNombre", query = "SELECT s FROM Socio s WHERE s.nombre = :nombre")
+    , @NamedQuery(name = "Socio.findByApellidos", query = "SELECT s FROM Socio s WHERE s.apellidos = :apellidos")
+    , @NamedQuery(name = "Socio.findByEstado", query = "SELECT s FROM Socio s WHERE s.estado = :estado")
+    , @NamedQuery(name = "Socio.findByNif", query = "SELECT s FROM Socio s WHERE s.nif = :nif")
+    , @NamedQuery(name = "Socio.findByDireccion", query = "SELECT s FROM Socio s WHERE s.direccion = :direccion")
+    , @NamedQuery(name = "Socio.findByPoblacion", query = "SELECT s FROM Socio s WHERE s.poblacion = :poblacion")
+    , @NamedQuery(name = "Socio.findByCodigoPostal", query = "SELECT s FROM Socio s WHERE s.codigoPostal = :codigoPostal")
+    , @NamedQuery(name = "Socio.findByProvincia", query = "SELECT s FROM Socio s WHERE s.provincia = :provincia")
+    , @NamedQuery(name = "Socio.findByTelefonoFijo", query = "SELECT s FROM Socio s WHERE s.telefonoFijo = :telefonoFijo")
+    , @NamedQuery(name = "Socio.findByTelefonoMovil", query = "SELECT s FROM Socio s WHERE s.telefonoMovil = :telefonoMovil")
+    , @NamedQuery(name = "Socio.findByEmail", query = "SELECT s FROM Socio s WHERE s.email = :email")
+    , @NamedQuery(name = "Socio.findByRelacion", query = "SELECT s FROM Socio s WHERE s.relacion = :relacion")
+    , @NamedQuery(name = "Socio.findByCertificado", query = "SELECT s FROM Socio s WHERE s.certificado = :certificado")
+    , @NamedQuery(name = "Socio.findBySector", query = "SELECT s FROM Socio s WHERE s.sector = :sector")
+    , @NamedQuery(name = "Socio.findByFechaAlta", query = "SELECT s FROM Socio s WHERE s.fechaAlta = :fechaAlta")
+    , @NamedQuery(name = "Socio.findByFechaBaja", query = "SELECT s FROM Socio s WHERE s.fechaBaja = :fechaBaja")
+    , @NamedQuery(name = "Socio.findByObservaciones", query = "SELECT s FROM Socio s WHERE s.observaciones = :observaciones")})
+public class Socio implements Serializable {
 
+    private static final long serialVersionUID = 1L;
     @Id
-    @Column(name = "numero_de_socio", nullable = false)
-    public int getNumeroDeSocio() {
-        return numeroDeSocio;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Basic(optional = false)
+    @Column(name = "numero_de_socio")
+    private Integer numeroDeSocio;
+    @Basic(optional = false)
+    @NotNull
+    @Size(min = 1, max = 45)
+    @Column(name = "nombre")
+    private String nombre;
+    @Basic(optional = false)
+    @NotNull
+    @Size(min = 1, max = 45)
+    @Column(name = "apellidos")
+    private String apellidos;
+    @Size(max = 15)
+    @Column(name = "estado")
+    private String estado;
+    @Basic(optional = false)
+    @NotNull
+    @Size(min = 1, max = 9)
+    @Column(name = "nif")
+    private String nif;
+    @Basic(optional = false)
+    @NotNull
+    @Size(min = 1, max = 45)
+    @Column(name = "direccion")
+    private String direccion;
+    @Basic(optional = false)
+    @NotNull
+    @Size(min = 1, max = 30)
+    @Column(name = "poblacion")
+    private String poblacion;
+    @Basic(optional = false)
+    @NotNull
+    @Size(min = 1, max = 10)
+    @Column(name = "codigo_postal")
+    private String codigoPostal;
+    @Basic(optional = false)
+    @NotNull
+    @Size(min = 1, max = 25)
+    @Column(name = "provincia")
+    private String provincia;
+    @Column(name = "telefono_fijo")
+    private Integer telefonoFijo;
+    @Basic(optional = false)
+    @NotNull
+    @Column(name = "telefono_movil")
+    private int telefonoMovil;
+    // @Pattern(regexp="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?", message="Invalid email")//if the field contains email address consider using this annotation to enforce field validation
+    @Basic(optional = false)
+    @NotNull
+    @Size(min = 1, max = 45)
+    @Column(name = "email")
+    private String email;
+    @Size(max = 45)
+    @Column(name = "relacion")
+    private String relacion;
+    @Basic(optional = false)
+    @NotNull
+    @Column(name = "certificado")
+    private boolean certificado;
+    @Basic(optional = false)
+    @NotNull
+    @Size(min = 1, max = 50)
+    @Column(name = "sector")
+    private String sector;
+    @Basic(optional = false)
+    @NotNull
+    @Column(name = "fecha_alta")
+    @Temporal(TemporalType.DATE)
+    private Date fechaAlta;
+    @Column(name = "fecha_baja")
+    @Temporal(TemporalType.DATE)
+    private Date fechaBaja;
+    @Size(max = 100)
+    @Column(name = "observaciones")
+    private String observaciones;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "socio")
+    private Collection<Apadrinamiento> apadrinamientoCollection;
+    @OneToMany(mappedBy = "numeroSocio")
+    private Collection<RegistroEconomico> registroEconomicoCollection;
+
+    public Socio() {
     }
 
-    public void setNumeroDeSocio(int numeroDeSocio) {
+    public Socio(Integer numeroDeSocio) {
         this.numeroDeSocio = numeroDeSocio;
     }
 
-    @Basic
-    @Column(name = "nombre", nullable = false, length = 45)
+    public Socio(Integer numeroDeSocio, String nombre, String apellidos, String nif, String direccion, String poblacion, String codigoPostal, String provincia, int telefonoMovil, String email, boolean certificado, String sector, Date fechaAlta) {
+        this.numeroDeSocio = numeroDeSocio;
+        this.nombre = nombre;
+        this.apellidos = apellidos;
+        this.nif = nif;
+        this.direccion = direccion;
+        this.poblacion = poblacion;
+        this.codigoPostal = codigoPostal;
+        this.provincia = provincia;
+        this.telefonoMovil = telefonoMovil;
+        this.email = email;
+        this.certificado = certificado;
+        this.sector = sector;
+        this.fechaAlta = fechaAlta;
+    }
+
+    public Integer getNumeroDeSocio() {
+        return numeroDeSocio;
+    }
+
+    public void setNumeroDeSocio(Integer numeroDeSocio) {
+        this.numeroDeSocio = numeroDeSocio;
+    }
+
     public String getNombre() {
         return nombre;
     }
@@ -48,8 +172,6 @@ public class Socio {
         this.nombre = nombre;
     }
 
-    @Basic
-    @Column(name = "apellidos", nullable = false, length = 45)
     public String getApellidos() {
         return apellidos;
     }
@@ -58,8 +180,6 @@ public class Socio {
         this.apellidos = apellidos;
     }
 
-    @Basic
-    @Column(name = "estado", nullable = true, length = 15)
     public String getEstado() {
         return estado;
     }
@@ -68,8 +188,6 @@ public class Socio {
         this.estado = estado;
     }
 
-    @Basic
-    @Column(name = "nif", nullable = false, length = 9)
     public String getNif() {
         return nif;
     }
@@ -78,8 +196,6 @@ public class Socio {
         this.nif = nif;
     }
 
-    @Basic
-    @Column(name = "direccion", nullable = false, length = 45)
     public String getDireccion() {
         return direccion;
     }
@@ -88,8 +204,6 @@ public class Socio {
         this.direccion = direccion;
     }
 
-    @Basic
-    @Column(name = "poblacion", nullable = false, length = 30)
     public String getPoblacion() {
         return poblacion;
     }
@@ -98,8 +212,6 @@ public class Socio {
         this.poblacion = poblacion;
     }
 
-    @Basic
-    @Column(name = "codigo_postal", nullable = false, length = 10)
     public String getCodigoPostal() {
         return codigoPostal;
     }
@@ -108,8 +220,6 @@ public class Socio {
         this.codigoPostal = codigoPostal;
     }
 
-    @Basic
-    @Column(name = "provincia", nullable = false, length = 25)
     public String getProvincia() {
         return provincia;
     }
@@ -118,8 +228,6 @@ public class Socio {
         this.provincia = provincia;
     }
 
-    @Basic
-    @Column(name = "telefono_fijo", nullable = true)
     public Integer getTelefonoFijo() {
         return telefonoFijo;
     }
@@ -128,8 +236,6 @@ public class Socio {
         this.telefonoFijo = telefonoFijo;
     }
 
-    @Basic
-    @Column(name = "telefono_movil", nullable = false)
     public int getTelefonoMovil() {
         return telefonoMovil;
     }
@@ -138,8 +244,6 @@ public class Socio {
         this.telefonoMovil = telefonoMovil;
     }
 
-    @Basic
-    @Column(name = "email", nullable = false, length = 45)
     public String getEmail() {
         return email;
     }
@@ -148,8 +252,6 @@ public class Socio {
         this.email = email;
     }
 
-    @Basic
-    @Column(name = "relacion", nullable = true, length = 45)
     public String getRelacion() {
         return relacion;
     }
@@ -158,9 +260,7 @@ public class Socio {
         this.relacion = relacion;
     }
 
-    @Basic
-    @Column(name = "certificado", nullable = false)
-    public boolean isCertificado() {
+    public boolean getCertificado() {
         return certificado;
     }
 
@@ -168,8 +268,6 @@ public class Socio {
         this.certificado = certificado;
     }
 
-    @Basic
-    @Column(name = "sector", nullable = false, length = 50)
     public String getSector() {
         return sector;
     }
@@ -178,8 +276,6 @@ public class Socio {
         this.sector = sector;
     }
 
-    @Basic
-    @Column(name = "fecha_alta", nullable = false)
     public Date getFechaAlta() {
         return fechaAlta;
     }
@@ -188,8 +284,6 @@ public class Socio {
         this.fechaAlta = fechaAlta;
     }
 
-    @Basic
-    @Column(name = "fecha_baja", nullable = true)
     public Date getFechaBaja() {
         return fechaBaja;
     }
@@ -198,8 +292,6 @@ public class Socio {
         this.fechaBaja = fechaBaja;
     }
 
-    @Basic
-    @Column(name = "observaciones", nullable = true, length = 100)
     public String getObservaciones() {
         return observaciones;
     }
@@ -208,33 +300,47 @@ public class Socio {
         this.observaciones = observaciones;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Socio socio = (Socio) o;
-        return numeroDeSocio == socio.numeroDeSocio &&
-              telefonoMovil == socio.telefonoMovil &&
-              certificado == socio.certificado &&
-              Objects.equals(nombre, socio.nombre) &&
-              Objects.equals(apellidos, socio.apellidos) &&
-              Objects.equals(estado, socio.estado) &&
-              Objects.equals(nif, socio.nif) &&
-              Objects.equals(direccion, socio.direccion) &&
-              Objects.equals(poblacion, socio.poblacion) &&
-              Objects.equals(codigoPostal, socio.codigoPostal) &&
-              Objects.equals(provincia, socio.provincia) &&
-              Objects.equals(telefonoFijo, socio.telefonoFijo) &&
-              Objects.equals(email, socio.email) &&
-              Objects.equals(relacion, socio.relacion) &&
-              Objects.equals(sector, socio.sector) &&
-              Objects.equals(fechaAlta, socio.fechaAlta) &&
-              Objects.equals(fechaBaja, socio.fechaBaja) &&
-              Objects.equals(observaciones, socio.observaciones);
+    @XmlTransient
+    public Collection<Apadrinamiento> getApadrinamientoCollection() {
+        return apadrinamientoCollection;
+    }
+
+    public void setApadrinamientoCollection(Collection<Apadrinamiento> apadrinamientoCollection) {
+        this.apadrinamientoCollection = apadrinamientoCollection;
+    }
+
+    @XmlTransient
+    public Collection<RegistroEconomico> getRegistroEconomicoCollection() {
+        return registroEconomicoCollection;
+    }
+
+    public void setRegistroEconomicoCollection(Collection<RegistroEconomico> registroEconomicoCollection) {
+        this.registroEconomicoCollection = registroEconomicoCollection;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(numeroDeSocio, nombre, apellidos, estado, nif, direccion, poblacion, codigoPostal, provincia, telefonoFijo, telefonoMovil, email, relacion, certificado, sector, fechaAlta, fechaBaja, observaciones);
+        int hash = 0;
+        hash += (numeroDeSocio != null ? numeroDeSocio.hashCode() : 0);
+        return hash;
     }
+
+    @Override
+    public boolean equals(Object object) {
+        // TODO: Warning - this method won't work in the case the id fields are not set
+        if (!(object instanceof Socio)) {
+            return false;
+        }
+        Socio other = (Socio) object;
+        if ((this.numeroDeSocio == null && other.numeroDeSocio != null) || (this.numeroDeSocio != null && !this.numeroDeSocio.equals(other.numeroDeSocio))) {
+            return false;
+        }
+        return true;
+    }
+
+    @Override
+    public String toString() {
+        return "models.entities.Socio[ numeroDeSocio=" + numeroDeSocio + " ]";
+    }
+
 }
